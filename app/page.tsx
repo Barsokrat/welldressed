@@ -25,7 +25,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-8">
+      <section className="relative min-h-screen flex items-center justify-center py-20 px-8 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px'}}>
           <div className="mb-10 fade-in">
             <div className="inline-block">
@@ -60,13 +60,17 @@ export default function HomePage() {
             </a>
           </div>
 
-          <div className="absolute top-20 left-10 text-6xl opacity-10 rotate-12">✂️</div>
-          <div className="absolute bottom-20 right-10 text-6xl opacity-10 -rotate-12">🧵</div>
+          {/* Decorative elements - hidden on mobile */}
+          <div className="hidden md:block absolute top-20 left-10 text-6xl opacity-10 rotate-12">✂️</div>
+          <div className="hidden md:block absolute bottom-20 right-10 text-6xl opacity-10 -rotate-12">🧵</div>
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+
       {/* About Section */}
-      <section id="about" className="py-20 px-6 sm:px-8">
+      <section id="about" className="py-20 px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -97,8 +101,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+
       {/* Services Section */}
-      <section id="services" className="py-20 px-6 sm:px-8">
+      <section id="services" className="py-20 px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -107,7 +114,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-6">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
@@ -129,8 +136,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-6 sm:px-8">
+      <section id="pricing" className="py-20 px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -258,8 +268,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+
       {/* Training Section */}
-      <section id="training" className="py-20 px-6 sm:px-8">
+      <section id="training" className="py-20 px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="text-center mb-8">
@@ -303,8 +316,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 sm:px-8">
+      <section id="contact" className="py-20 px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -354,7 +370,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 sm:px-8 bg-[#5C4033] text-white">
+      <footer className="py-8 px-8 sm:px-12 bg-[#5C4033] text-white">
         <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
           <p className="text-lg mb-2">{t.footer.tagline}</p>
           <p className="text-sm text-white/70">{t.footer.rights}</p>
