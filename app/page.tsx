@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture">
       {/* Global max-width container */}
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Language Toggle */}
       <div className="fixed top-6 right-6 z-50">
         <button
