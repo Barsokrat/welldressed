@@ -28,7 +28,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center py-20">
-        <div className="w-full text-center">
+        <div className="max-w-3xl mx-auto text-center">
           {/* Logo/Name */}
           <div className="mb-10 fade-in">
             <div className="inline-block">
@@ -73,7 +73,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section id="about" className="py-20 bg-white/50 backdrop-blur-sm rounded-3xl">
-        <div className="w-full">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.about.title}
@@ -105,7 +105,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section id="services" className="py-20">
-        <div className="w-full">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.services.title}
@@ -137,7 +137,7 @@ export default function HomePage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20">
-        <div className="w-full">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.pricing.title}
@@ -266,7 +266,7 @@ export default function HomePage() {
 
       {/* Training Section */}
       <section id="training" className="py-20">
-        <div className="w-full">
+        <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-[#D4AF37]">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4">🎓</div>
@@ -311,7 +311,7 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20">
-        <div className="w-full">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.contact.title}
