@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Scissors, Heart, Award, Mail, Phone, MessageCircle } from 'lucide-react'
+import { Scissors, Heart, Award, Mail, Phone, MessageCircle, Instagram } from 'lucide-react'
 import { getTranslation, type Language } from './i18n'
 
 export default function HomePage() {
@@ -67,34 +67,36 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+      <div className="py-16">
+        <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
+      </div>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-8 sm:px-12">
+      <section id="about" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
+            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.about.title}
             </h2>
-            <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="flex items-start gap-4 mb-6">
-              <Heart className="w-8 h-8 text-[#E8C4C4] flex-shrink-0 mt-1" />
-              <p className="text-lg text-[#5C4033] leading-relaxed">
+              <Heart className="w-8 h-8 text-[#E8C4C4] flex-shrink-0 mt-0.5" />
+              <p className="text-[#5C4033] leading-relaxed" style={{fontSize: '1rem'}}>
                 {t.about.description}
               </p>
             </div>
 
-            <div className="space-y-4 mt-8 pt-8 border-t border-[#E8C4C4]">
+            <div className="space-y-4 mt-10 pt-6" style={{borderTop: '2px dashed #E8C4C4'}}>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#D4AF37] mt-2"></div>
-                <p className="text-[#8B7355]">{t.about.location}</p>
+                <div className="w-2 h-2 rounded-full bg-[#D4AF37] mt-2 flex-shrink-0"></div>
+                <p className="text-[#8B7355]" style={{fontSize: '1rem'}}>{t.about.location}</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#D4AF37] mt-2"></div>
-                <p className="text-[#8B7355]">{t.about.specialty}</p>
+                <div className="w-2 h-2 rounded-full bg-[#D4AF37] mt-2 flex-shrink-0"></div>
+                <p className="text-[#8B7355]" style={{fontSize: '1rem'}}>{t.about.specialty}</p>
               </div>
             </div>
           </div>
@@ -102,13 +104,13 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-8 sm:px-12">
+      <section id="services" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
+            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.services.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
@@ -137,13 +139,13 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-8 sm:px-12">
+      <section id="pricing" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
+            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.pricing.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
@@ -269,15 +271,15 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Training Section */}
-      <section id="training" className="py-20 px-8 sm:px-12">
+      <section id="training" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4">🎓</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
+              <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
                 {t.training.title}
               </h2>
               <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
@@ -317,13 +319,13 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div>
+      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-8 sm:px-12">
+      <section id="contact" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
+            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.contact.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
@@ -360,6 +362,17 @@ export default function HomePage() {
               <MessageCircle className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
               <p className="text-sm text-[#8B7355] mb-2">{t.contact.whatsapp}</p>
               <p className="font-semibold text-[#5C4033]">+971 52 623 2050</p>
+            </a>
+
+            <a
+              href="https://www.instagram.com/yanboroboro/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <Instagram className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
+              <p className="text-sm text-[#8B7355] mb-2">Instagram</p>
+              <p className="font-semibold text-[#5C4033]">@yanboroboro</p>
             </a>
           </div>
 
