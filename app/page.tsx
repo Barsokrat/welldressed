@@ -15,37 +15,37 @@ export default function HomePage() {
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture">
       {/* Language Toggle */}
-      <div className="fixed top-6 right-6 z-50">
+      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
         <button
           onClick={toggleLanguage}
-          className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-medium text-[#5C4033]"
+          className="bg-white/90 backdrop-blur-sm px-6 py-3 sm:px-5 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base sm:text-sm text-[#5C4033]"
         >
           {lang === 'en' ? 'RU' : 'EN'}
         </button>
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center py-20 px-8 sm:px-12">
+      <section className="relative min-h-screen flex items-center justify-center py-12 sm:py-20 px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px'}}>
-          <div className="mb-10 fade-in">
+          <div className="mb-8 sm:mb-10 fade-in">
             <div className="inline-block">
-              <Scissors className="w-20 h-20 mx-auto mb-8 text-[#D4AF37]" strokeWidth={1.5} />
+              <Scissors className="w-16 sm:w-20 h-16 sm:h-20 mx-auto mb-6 sm:mb-8 text-[#D4AF37]" strokeWidth={1.5} />
             </div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#5C4033] mb-6 leading-tight">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-[#5C4033] mb-4 sm:mb-6 leading-tight">
               {t.hero.title}
             </h1>
-            <div className="w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-8"></div>
-            <p className="text-xl sm:text-2xl md:text-3xl font-medium text-[#8B7355] mb-3">
+            <div className="w-32 sm:w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#8B7355] mb-2 sm:mb-3">
               {t.hero.subtitle}
             </p>
-            <p className="text-lg sm:text-xl text-[#8B7355]">
+            <p className="text-xl sm:text-2xl text-[#8B7355]">
               {t.hero.tagline}
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg mb-10 fade-in delay-100">
-            <Award className="w-6 h-6 text-[#D4AF37]" />
-            <span className="font-semibold text-lg text-[#5C4033]">{t.hero.experience}</span>
+          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg mb-8 sm:mb-10 fade-in delay-100">
+            <Award className="w-5 sm:w-6 h-5 sm:h-6 text-[#D4AF37]" />
+            <span className="font-semibold text-base sm:text-lg text-[#5C4033]">{t.hero.experience}</span>
           </div>
 
           <div className="fade-in delay-200">
@@ -53,9 +53,9 @@ export default function HomePage() {
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C4A137] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37] to-[#C4A137] hover:from-[#C4A137] hover:to-[#B49027] text-white px-10 py-5 rounded-full text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-6 h-6" />
               {t.hero.cta}
             </a>
           </div>
@@ -106,7 +106,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section id="services" className="py-20 px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.services.title}
@@ -114,7 +114,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-8">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
@@ -306,9 +306,9 @@ export default function HomePage() {
                 href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I am interested in the sewing training course.' : 'Здравствуйте! Интересует курс обучения шитью.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#C4A137] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37] to-[#C4A137] hover:from-[#C4A137] hover:to-[#B49027] text-white px-10 py-5 rounded-full text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-6 h-6" />
                 {t.training.cta}
               </a>
             </div>
