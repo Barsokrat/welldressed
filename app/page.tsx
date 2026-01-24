@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture">
       {/* Global max-width container */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
       {/* Language Toggle */}
       <div className="fixed top-6 right-6 z-50">
         <button
@@ -72,8 +72,8 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="-mx-4 sm:-mx-6 lg:-mx-8 py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto">
+      <section id="about" className="-mx-4 sm:-mx-6 lg:-mx-8 py-20 bg-white/50 backdrop-blur-sm">
+        <div className="w-full">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.about.title}
@@ -104,7 +104,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="services" className="py-20">
         <div className="w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -136,7 +136,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
+      <section id="pricing" className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -265,7 +265,7 @@ export default function HomePage() {
       </section>
 
       {/* Training Section */}
-      <section id="training" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#F5E6E6] to-[#FFD4C4]">
+      <section id="training" className="py-20 bg-gradient-to-br from-[#F5E6E6] to-[#FFD4C4]">
         <div className="w-full">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-[#D4AF37]">
             <div className="text-center mb-8">
@@ -310,7 +310,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
+      <section id="contact" className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="w-full">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
