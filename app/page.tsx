@@ -14,8 +14,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture">
-      {/* Global max-width container */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Language Toggle */}
       <div className="fixed top-6 right-6 z-50">
         <button
@@ -27,7 +25,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center py-20">
+      <section className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           {/* Logo/Name */}
           <div className="mb-10 fade-in">
@@ -72,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white/50 backdrop-blur-sm rounded-3xl">
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -104,7 +102,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -136,7 +134,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -265,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* Training Section */}
-      <section id="training" className="py-20">
+      <section id="training" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-[#D4AF37]">
             <div className="text-center mb-8">
@@ -310,7 +308,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -360,13 +358,12 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-[#5C4033] text-white rounded-3xl">
-        <div className="text-center">
+      <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-[#5C4033] text-white">
+        <div className="max-w-2xl mx-auto text-center">
           <p className="text-lg mb-2">{t.footer.tagline}</p>
           <p className="text-sm text-white/70">{t.footer.rights}</p>
         </div>
       </footer>
-      </div>
     </div>
   )
 }
