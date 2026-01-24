@@ -31,14 +31,14 @@ export default function HomePage() {
             <div className="inline-block">
               <Scissors className="w-16 sm:w-20 h-16 sm:h-20 mx-auto mb-6 sm:mb-8 text-[#D4AF37]" strokeWidth={1.5} />
             </div>
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-[#5C4033] mb-4 sm:mb-6 leading-tight">
+            <h1 className="font-bold text-[#5C4033] mb-4 sm:mb-6 leading-tight" style={{fontSize: 'clamp(3rem, 12vw, 7rem)'}}>
               {t.hero.title}
             </h1>
             <div className="w-32 sm:w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-6 sm:mb-8"></div>
-            <p className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#8B7355] mb-2 sm:mb-3">
+            <p className="font-medium text-[#8B7355] mb-2 sm:mb-3" style={{fontSize: 'clamp(1.5rem, 5vw, 2.5rem)'}}>
               {t.hero.subtitle}
             </p>
-            <p className="text-xl sm:text-2xl text-[#8B7355]">
+            <p className="text-[#8B7355]" style={{fontSize: 'clamp(1.25rem, 4vw, 1.75rem)'}}>
               {t.hero.tagline}
             </p>
           </div>
@@ -53,10 +53,15 @@ export default function HomePage() {
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37] to-[#C4A137] hover:from-[#C4A137] hover:to-[#B49027] text-white px-10 py-5 rounded-full text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl"
+              className="inline-flex items-center justify-center gap-3 text-white px-10 py-5 rounded-full font-bold transition-all duration-300 hover:scale-105 no-underline"
+              style={{
+                background: 'linear-gradient(to right, #D4AF37, #C4A137)',
+                fontSize: '1.125rem',
+                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+              }}
             >
               <MessageCircle className="w-6 h-6" />
-              {t.hero.cta}
+              <span>{t.hero.cta}</span>
             </a>
           </div>
 
@@ -306,10 +311,15 @@ export default function HomePage() {
                 href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I am interested in the sewing training course.' : 'Здравствуйте! Интересует курс обучения шитью.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37] to-[#C4A137] hover:from-[#C4A137] hover:to-[#B49027] text-white px-10 py-5 rounded-full text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl"
+                className="inline-flex items-center justify-center gap-3 text-white px-10 py-5 rounded-full font-bold transition-all duration-300 hover:scale-105 no-underline"
+                style={{
+                  background: 'linear-gradient(to right, #D4AF37, #C4A137)',
+                  fontSize: '1.125rem',
+                  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                }}
               >
                 <MessageCircle className="w-6 h-6" />
-                {t.training.cta}
+                <span>{t.training.cta}</span>
               </a>
             </div>
           </div>
