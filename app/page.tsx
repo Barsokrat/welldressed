@@ -42,20 +42,20 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.skirts}</h3>
               </div>
               <ul className="space-y-4">
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.skirts.simple}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.skirts.simple}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">250–350</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.skirts.circle}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.skirts.circle}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">300–400</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.skirts.gathered}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.skirts.gathered}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">350–450</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.skirts.lined}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.skirts.lined}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">450–600</span>
                 </li>
               </ul>
@@ -68,16 +68,16 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.dresses}</h3>
               </div>
               <ul className="space-y-4">
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.dresses.casual}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.dresses.casual}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">400–600</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.dresses.boho}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.dresses.boho}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">500–700</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.dresses.evening}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.dresses.evening}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">{lang === 'en' ? 'from' : 'от'} 1000</span>
                 </li>
               </ul>
@@ -90,16 +90,16 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.blouses}</h3>
               </div>
               <ul className="space-y-4">
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.blouses.simple}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.blouses.simple}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">200–300</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.blouses.detailed}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.blouses.detailed}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">300–400</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.blouses.corset}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.blouses.corset}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">350–700</span>
                 </li>
               </ul>
@@ -112,16 +112,16 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.trousers}</h3>
               </div>
               <ul className="space-y-4">
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.trousers.simple}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.trousers.simple}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">300–400</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.trousers.tailored}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.trousers.tailored}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">{lang === 'en' ? 'from' : 'от'} 600</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.trousers.wide}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.trousers.wide}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">350–500</span>
                 </li>
               </ul>
@@ -134,16 +134,16 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.jackets}</h3>
               </div>
               <ul className="space-y-4">
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.jackets.vestSimple}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.jackets.vestSimple}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">250–350</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.jackets.vestLined}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.jackets.vestLined}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">350–500</span>
                 </li>
-                <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355] flex-1">{t.pricing.jackets.jacket}</span>
+                <li className="flex  items-start">
+                  <span className="text-[#8B7355] ">{t.pricing.jackets.jacket}</span>
                   <span className="font-semibold text-[#5C4033] ml-4">{lang === 'en' ? 'from' : 'от'} 900</span>
                 </li>
               </ul>
