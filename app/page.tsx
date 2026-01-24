@@ -53,12 +53,7 @@ export default function HomePage() {
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 text-white px-10 py-5 rounded-full font-bold transition-all duration-300 hover:scale-105 no-underline"
-              style={{
-                background: 'linear-gradient(to right, #D4AF37, #C4A137)',
-                fontSize: '1.125rem',
-                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-              }}
+              className="button-cta"
             >
               <MessageCircle className="w-6 h-6" />
               <span>{t.hero.cta}</span>
@@ -311,12 +306,7 @@ export default function HomePage() {
                 href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I am interested in the sewing training course.' : 'Здравствуйте! Интересует курс обучения шитью.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 text-white px-10 py-5 rounded-full font-bold transition-all duration-300 hover:scale-105 no-underline"
-                style={{
-                  background: 'linear-gradient(to right, #D4AF37, #C4A137)',
-                  fontSize: '1.125rem',
-                  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-                }}
+                className="button-cta"
               >
                 <MessageCircle className="w-6 h-6" />
                 <span>{t.training.cta}</span>
