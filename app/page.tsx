@@ -14,6 +14,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture">
+      {/* Global max-width container */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Language Toggle */}
       <div className="fixed top-6 right-6 z-50">
         <button
@@ -25,8 +27,8 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-xl mx-auto text-center">
+      <section className="relative min-h-screen flex items-center justify-center py-20">
+        <div className="w-full text-center">
           {/* Logo/Name */}
           <div className="mb-10 fade-in">
             <div className="inline-block">
@@ -70,8 +72,8 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-2xl mx-auto">
+      <section id="about" className="-mx-4 sm:-mx-6 lg:-mx-8 py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.about.title}
@@ -103,7 +105,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto">
+        <div className="w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.services.title}
@@ -135,7 +137,7 @@ export default function HomePage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-2xl mx-auto">
+        <div className="w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.pricing.title}
@@ -239,7 +241,7 @@ export default function HomePage() {
           </div>
 
           {/* Jackets - Full Width */}
-          <div className="mt-8 bg-white rounded-3xl shadow-xl p-8 border border-[#E8C4C4] max-w-2xl mx-auto">
+          <div className="mt-8 bg-white rounded-3xl shadow-xl p-8 border border-[#E8C4C4] w-full">
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E8C4C4]">
               <span className="text-4xl">🧥</span>
               <h3 className="text-2xl font-serif font-bold text-[#5C4033]">{t.services.jackets}</h3>
@@ -264,7 +266,7 @@ export default function HomePage() {
 
       {/* Training Section */}
       <section id="training" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#F5E6E6] to-[#FFD4C4]">
-        <div className="max-w-2xl mx-auto">
+        <div className="w-full">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-[#D4AF37]">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4">🎓</div>
@@ -309,7 +311,7 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-2xl mx-auto">
+        <div className="w-full">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.contact.title}
@@ -358,12 +360,13 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-[#5C4033] text-white">
-        <div className="max-w-2xl mx-auto text-center">
+      <footer className="-mx-4 sm:-mx-6 lg:-mx-8 py-8 px-4 sm:px-6 lg:px-8 bg-[#5C4033] text-white">
+        <div className="text-center">
           <p className="text-lg mb-2">{t.footer.tagline}</p>
           <p className="text-sm text-white/70">{t.footer.rights}</p>
         </div>
       </footer>
+      </div>
     </div>
   )
 }
