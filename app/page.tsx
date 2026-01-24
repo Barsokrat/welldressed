@@ -111,7 +111,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
@@ -121,10 +121,10 @@ export default function HomePage() {
             ].map((service, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg border border-[#E8C4C4] hover:border-[#D4AF37] transition-all duration-300 hover:scale-105"
+                className="bg-white rounded-2xl p-6 text-center shadow-lg border border-[#E8C4C4] hover:border-[#D4AF37] transition-all duration-300 hover:scale-105 w-36"
               >
                 <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="font-semibold text-[#5C4033]">
+                <h3 className="font-semibold text-[#5C4033] text-sm">
                   {service.title}
                 </h3>
               </div>
