@@ -66,8 +66,8 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-8">
-        <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
+      <section id="about" className="py-20 px-6 sm:px-8">
+        <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.about.title}
@@ -98,8 +98,8 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-8">
-        <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
+      <section id="services" className="py-20 px-6 sm:px-8">
+        <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.services.title}
@@ -130,7 +130,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-8">
+      <section id="pricing" className="py-20 px-6 sm:px-8">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -259,8 +259,8 @@ export default function HomePage() {
       </section>
 
       {/* Training Section */}
-      <section id="training" className="py-20 px-4 sm:px-8">
-        <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
+      <section id="training" className="py-20 px-6 sm:px-8">
+        <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4">🎓</div>
@@ -304,7 +304,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-8">
+      <section id="contact" className="py-20 px-6 sm:px-8">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -354,7 +354,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-8 bg-[#5C4033] text-white">
+      <footer className="py-8 px-6 sm:px-8 bg-[#5C4033] text-white">
         <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
           <p className="text-lg mb-2">{t.footer.tagline}</p>
           <p className="text-sm text-white/70">{t.footer.rights}</p>
