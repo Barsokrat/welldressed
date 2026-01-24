@@ -72,7 +72,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="-mx-4 sm:-mx-6 lg:-mx-8 py-20 bg-white/50 backdrop-blur-sm">
+      <section id="about" className="py-20 bg-white/50 backdrop-blur-sm rounded-3xl">
         <div className="w-full">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -136,7 +136,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-white/50 backdrop-blur-sm">
+      <section id="pricing" className="py-20">
         <div className="w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -265,7 +265,7 @@ export default function HomePage() {
       </section>
 
       {/* Training Section */}
-      <section id="training" className="py-20 bg-gradient-to-br from-[#F5E6E6] to-[#FFD4C4]">
+      <section id="training" className="py-20">
         <div className="w-full">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-[#D4AF37]">
             <div className="text-center mb-8">
@@ -310,7 +310,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white/50 backdrop-blur-sm">
+      <section id="contact" className="py-20">
         <div className="w-full">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
@@ -360,7 +360,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="-mx-4 sm:-mx-6 lg:-mx-8 py-8 px-4 sm:px-6 lg:px-8 bg-[#5C4033] text-white">
+      <footer className="py-8 bg-[#5C4033] text-white rounded-3xl">
         <div className="text-center">
           <p className="text-lg mb-2">{t.footer.tagline}</p>
           <p className="text-sm text-white/70">{t.footer.rights}</p>
