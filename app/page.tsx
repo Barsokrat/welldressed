@@ -32,14 +32,14 @@ export default function HomePage() {
             <div className="inline-block">
               <Scissors className="w-20 h-20 mx-auto mb-8 text-[#D4AF37]" strokeWidth={1.5} />
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold text-[#5C4033] mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#5C4033] mb-6 leading-tight">
               {t.hero.title}
             </h1>
             <div className="w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-8"></div>
-            <p className="text-2xl md:text-3xl font-medium text-[#8B7355] mb-3">
+            <p className="text-xl sm:text-2xl md:text-3xl font-medium text-[#8B7355] mb-3">
               {t.hero.subtitle}
             </p>
-            <p className="text-xl text-[#8B7355]">
+            <p className="text-lg sm:text-xl text-[#8B7355]">
               {t.hero.tagline}
             </p>
           </div>
