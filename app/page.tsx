@@ -25,7 +25,7 @@ export default function HomePage() {
 
       {/* Pricing Section - NARROW AND COMPACT */}
       <section className="min-h-screen flex items-center justify-center py-20 px-4">
-        <div className="w-full max-w-2xl">
+        <div className="w-full max-w-lg">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033] mb-4">
               {t.pricing.title}
