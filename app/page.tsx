@@ -183,14 +183,14 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 min-[640px]:grid-cols-4 gap-6 lg:gap-8">
             {[
-              { icon: '/icons/1. dresses.png', title: t.services.dresses },
-              { icon: '/icons/2. skirts.png', title: t.services.skirts },
-              { icon: '/icons/3. blouses.png', title: t.services.blouses },
-              { icon: '/icons/4. trousers.png', title: t.services.trousers },
-              { icon: '/icons/5. blazers.png', title: t.services.jackets },
-              { icon: '/icons/6. corsets.png', title: t.services.corsets },
-              { icon: '/icons/7. accessories.png', title: t.services.accessories },
-              { icon: '/icons/8. recycling.png', title: t.services.recycling },
+              { icon: '/icons/1_dresses.png', title: t.services.dresses },
+              { icon: '/icons/2_skirts.png', title: t.services.skirts },
+              { icon: '/icons/3_blouses.png', title: t.services.blouses },
+              { icon: '/icons/4_trousers.png', title: t.services.trousers },
+              { icon: '/icons/5_blazers.png', title: t.services.jackets },
+              { icon: '/icons/6_corsets.png', title: t.services.corsets },
+              { icon: '/icons/7_accessories.png', title: t.services.accessories },
+              { icon: '/icons/8_recycling.png', title: t.services.recycling },
             ].map((service, idx) => (
               <div
                 key={idx}
