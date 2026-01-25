@@ -144,3 +144,8 @@ a.button-cta:hover {
 a.button-cta:visited {
   color: white !important;
 }
+
+/* Remove underline from contact section links */
+#contact a {
+  text-decoration: none !important;
+}

@@ -77,7 +77,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section id="about" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-12">
             <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.about.title}
@@ -110,7 +110,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section id="services" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '1200px'}}>
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-16">
             <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.services.title}
@@ -146,7 +146,7 @@ export default function HomePage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-16">
             <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.pricing.title}
@@ -276,7 +276,7 @@ export default function HomePage() {
 
       {/* Training Section */}
       <section id="training" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4">🎓</div>
@@ -322,7 +322,7 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <section id="contact" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-12">
             <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.contact.title}
@@ -333,7 +333,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
             <a
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to inquire about your services.' : 'Здравствуйте! Хотела бы узнать о ваших услугах.')}`}
               target="_blank"
@@ -383,7 +383,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="pt-3 pb-6 px-8 sm:px-12 bg-[#5C4033]">
-        <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
+        <div className="w-full mx-auto text-center" style={{maxWidth: '800px'}}>
           <div className="mb-2">
             <Image
               src="/logo.png"
