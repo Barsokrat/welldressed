@@ -3,7 +3,7 @@ export type Language = 'en' | 'ru';
 export const translations = {
   en: {
     hero: {
-      title: 'Yana Borodulina',
+      title: 'Yana Boro',
       subtitle: 'Custom Tailoring & Design',
       tagline: 'Bespoke Women\'s Clothing in Abu Dhabi',
       experience: '10+ Years of Sewing Excellence',

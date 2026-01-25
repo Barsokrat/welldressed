@@ -52,7 +52,7 @@ export default function HomePage() {
           </div>
 
           <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg mb-24 sm:mb-32 fade-in delay-100">
-            <Award className="w-5 sm:w-6 h-5 sm:h-6 text-[#D4AF37]" />
+            <Award className="w-5 sm:w-6 h-5 sm:h-6 text-[#CA9E76]" />
             <span className="font-semibold text-base sm:text-lg text-[#364147]">{t.hero.experience}</span>
           </div>
 
