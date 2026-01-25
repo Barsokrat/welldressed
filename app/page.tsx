@@ -48,7 +48,7 @@ export default function HomePage() {
             <span className="font-semibold text-base sm:text-lg text-[#5C4033]">{t.hero.experience}</span>
           </div>
 
-          <div className="fade-in delay-200 mb-12">
+          <div className="fade-in delay-200 mb-12 sm:mb-20">
             <a
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
@@ -301,7 +301,7 @@ export default function HomePage() {
               ))}
             </ul>
 
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 sm:mb-16">
               <a
                 href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I am interested in the sewing training course.' : 'Здравствуйте! Интересует курс обучения шитью.')}`}
                 target="_blank"
