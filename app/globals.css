@@ -23,11 +23,11 @@
 }
 
 * {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Columbia Sans', 'Ysabeau Infant', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Columbia Sans', 'Ysabeau Infant', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--color-cream);
   color: var(--color-brown);
 }
