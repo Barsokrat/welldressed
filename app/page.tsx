@@ -43,12 +43,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg mb-16 sm:mb-20 fade-in delay-100">
+          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg mb-24 sm:mb-32 fade-in delay-100">
             <Award className="w-5 sm:w-6 h-5 sm:h-6 text-[#D4AF37]" />
             <span className="font-semibold text-base sm:text-lg text-[#5C4033]">{t.hero.experience}</span>
           </div>
 
-          <div className="fade-in delay-200 mt-12 sm:mt-20 mb-12 sm:mb-20">
+          <div className="fade-in delay-200 mb-12 sm:mb-20">
             <a
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
