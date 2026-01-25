@@ -25,8 +25,8 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative flex items-start justify-center pt-20 sm:pt-32 pb-32 sm:pb-48 px-6 sm:px-12">
-        <div className="w-full text-center" style={{maxWidth: '700px'}}>
+      <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
+        <div className="w-full text-center mb-0 sm:mb-40" style={{maxWidth: '700px'}}>
           <div className="mb-8 sm:mb-10 fade-in">
             <div className="inline-block">
               <Scissors className="w-16 sm:w-20 h-16 sm:h-20 mx-auto mb-6 sm:mb-8 text-[#D4AF37]" strokeWidth={1.5} />
