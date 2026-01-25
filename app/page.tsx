@@ -33,8 +33,8 @@ export default function HomePage() {
               <Image
                 src="/logo.png"
                 alt="WellDressed Logo"
-                width={160}
-                height={160}
+                width={200}
+                height={200}
                 className="mx-auto"
                 priority
               />
@@ -74,8 +74,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section Divider */}
-      <div className="pb-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* About Section */}
       <section id="about" className="px-8 sm:px-12">
@@ -109,8 +107,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section Divider */}
-      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Services Section */}
       <section id="services" className="px-8 sm:px-12">
@@ -144,8 +140,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section Divider */}
-      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Pricing Section */}
       <section id="pricing" className="px-8 sm:px-12">
@@ -276,8 +270,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section Divider */}
-      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Training Section */}
       <section id="training" className="px-8 sm:px-12">
@@ -301,7 +293,7 @@ export default function HomePage() {
             <ul className="space-y-4 mb-8">
               {t.training.features.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#D4AF37] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-[#CA9E76] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm">✓</span>
                   </div>
                   <span className="text-[#364147]">{feature}</span>
@@ -324,8 +316,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section Divider */}
-      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Contact Section */}
       <section id="contact" className="px-8 sm:px-12">
@@ -347,7 +337,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <MessageCircle className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
+              <MessageCircle className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
               <p className="text-sm text-[#364147] mb-2">WhatsApp</p>
               <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
             </a>
@@ -356,7 +346,7 @@ export default function HomePage() {
               href="tel:+971526232050"
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <Phone className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
+              <Phone className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
               <p className="text-sm text-[#364147] mb-2">{t.contact.phone}</p>
               <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
             </a>
@@ -365,7 +355,7 @@ export default function HomePage() {
               href="mailto:yana@welldressed.ae"
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <Mail className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
+              <Mail className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
               <p className="text-sm text-[#364147] mb-2">{t.contact.email}</p>
               <p className="font-semibold text-[#364147] text-sm">yana@welldressed.ae</p>
             </a>
@@ -376,7 +366,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <Instagram className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
+              <Instagram className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
               <p className="text-sm text-[#364147] mb-2">Instagram</p>
               <p className="font-semibold text-[#364147] text-sm">@yanboroboro</p>
             </a>
@@ -389,9 +379,9 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 px-8 sm:px-12 bg-[#5C4033] text-white">
+      <footer className="py-6 px-8 sm:px-12 bg-[#5C4033] text-white">
         <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
-          <div className="mb-6">
+          <div className="mb-4">
             <Image
               src="/logo.png"
               alt="WellDressed Logo"
