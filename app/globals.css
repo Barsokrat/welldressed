@@ -149,3 +149,9 @@ a.button-cta:visited {
 #contact a {
   text-decoration: none !important;
 }
+
+/* Ensure footer has enough bottom padding on all devices */
+footer {
+  padding-bottom: 2rem !important;
+  min-height: 100px;
+}
