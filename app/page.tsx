@@ -25,7 +25,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-start justify-center pt-20 sm:pt-32 pb-20 px-6 sm:px-12">
+      <section className="relative flex items-start justify-center pt-20 sm:pt-32 pb-32 sm:pb-48 px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px'}}>
           <div className="mb-8 sm:mb-10 fade-in">
             <div className="inline-block">
@@ -67,7 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="pt-20 sm:pt-32 pb-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
+      <div className="pb-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* About Section */}
       <section id="about" className="px-8 sm:px-12">
