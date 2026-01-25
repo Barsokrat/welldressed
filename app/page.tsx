@@ -29,7 +29,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px', marginBottom: 'clamp(0px, 15vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
-            <div className="inline-block mb-4 sm:mb-6">
+            <div className="inline-block mb-2 sm:mb-4">
               <Image
                 src="/logo.png"
                 alt="WellDressed Logo"
@@ -39,7 +39,7 @@ export default function HomePage() {
                 priority
               />
             </div>
-            <h1 className="font-bold text-[#CA9E76] mb-4 sm:mb-6 leading-tight" style={{fontSize: 'clamp(3rem, 12vw, 7rem)'}}>
+            <h1 className="font-bold text-[#CA9E76] mb-4 sm:mb-6" style={{fontSize: 'clamp(3rem, 12vw, 7rem)', lineHeight: '1.1'}}>
               {t.hero.title}
             </h1>
             <div className="w-32 sm:w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-6 sm:mb-8"></div>
