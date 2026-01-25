@@ -1,16 +1,63 @@
 'use client'
 
 import { useState } from 'react'
-import { Scissors, Heart, Award, Mail, Phone, MessageCircle, Instagram } from 'lucide-react'
+import { Scissors, Heart, Award, Mail, Phone, MessageCircle, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { getTranslation, type Language } from './i18n'
 import Image from 'next/image'
 
+const portfolioImages = [
+  'IMG_0247.JPG',
+  'IMG_1566.JPG',
+  'IMG_2366.jpg',
+  'IMG_2860.JPG',
+  'IMG_4402.JPG',
+  'IMG_4740.JPG',
+  'IMG_5391.JPG',
+  'IMG_5392.JPG',
+  'IMG_5571.JPG',
+  'IMG_5874.JPG',
+  'IMG_5875.JPG',
+  'IMG_6570.JPG',
+  'IMG_8023.PNG',
+  'IMG_8946.JPG',
+];
+
 export default function HomePage() {
   const [lang, setLang] = useState<Language>('en')
+  const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [currentSlide, setCurrentSlide] = useState(0)
   const t = getTranslation(lang)
 
   const toggleLanguage = () => {
     setLang(prev => prev === 'en' ? 'ru' : 'en')
+  }
+
+  const openModal = (index: number) => {
+    setSelectedImage(index)
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null)
+  }
+
+  const nextImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage + 1) % portfolioImages.length)
+    }
+  }
+
+  const prevImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage - 1 + portfolioImages.length) % portfolioImages.length)
+    }
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % Math.ceil(portfolioImages.length / 4))
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + Math.ceil(portfolioImages.length / 4)) % Math.ceil(portfolioImages.length / 4))
   }
 
   return (
@@ -143,8 +190,8 @@ export default function HomePage() {
 
       {/* Portfolio Section */}
       <section id="portfolio" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '1200px'}}>
-          <div className="text-center mb-16">
+        <div className="w-full mx-auto" style={{maxWidth: '1000px'}}>
+          <div className="text-center mb-12">
             <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.portfolio.title}
             </h2>
@@ -152,38 +199,119 @@ export default function HomePage() {
             <p className="text-xl text-[#364147]">{t.portfolio.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              'IMG_0247.JPG',
-              'IMG_1566.JPG',
-              'IMG_2860.JPG',
-              'IMG_4402.JPG',
-              'IMG_4740.JPG',
-              'IMG_5391.JPG',
-              'IMG_5392.JPG',
-              'IMG_5571.JPG',
-              'IMG_5874.JPG',
-              'IMG_5875.JPG',
-              'IMG_6570.JPG',
-              'IMG_8023.PNG',
-              'IMG_8946.JPG',
-            ].map((img, idx) => (
+          {/* Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden">
               <div
-                key={idx}
-                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square"
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                <Image
-                  src={`/images/${img}`}
-                  alt={`Portfolio piece ${idx + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                />
+                {Array.from({ length: Math.ceil(portfolioImages.length / 4) }).map((_, slideIdx) => (
+                  <div key={slideIdx} className="min-w-full grid grid-cols-2 md:grid-cols-4 gap-4 px-2">
+                    {portfolioImages.slice(slideIdx * 4, slideIdx * 4 + 4).map((img, idx) => {
+                      const actualIdx = slideIdx * 4 + idx;
+                      return (
+                        <div
+                          key={actualIdx}
+                          onClick={() => openModal(actualIdx)}
+                          className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer"
+                        >
+                          <Image
+                            src={`/images/${img}`}
+                            alt={`Portfolio piece ${actualIdx + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Carousel Navigation */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+              aria-label="Previous"
+            >
+              <ChevronLeft className="w-6 h-6 text-[#CA9E76]" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+              aria-label="Next"
+            >
+              <ChevronRight className="w-6 h-6 text-[#CA9E76]" />
+            </button>
+
+            {/* Dots */}
+            <div className="flex justify-center gap-2 mt-6">
+              {Array.from({ length: Math.ceil(portfolioImages.length / 4) }).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    idx === currentSlide ? 'bg-[#CA9E76] w-8' : 'bg-[#CA9E76]/30'
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
+          <button
+            onClick={closeModal}
+            className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all"
+            aria-label="Close"
+          >
+            <X className="w-8 h-8 text-white" />
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); prevImage(); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-8 h-8 text-white" />
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); nextImage(); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-8 h-8 text-white" />
+          </button>
+
+          <div
+            className="relative max-w-5xl max-h-[90vh] w-full h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={`/images/${portfolioImages[selectedImage]}`}
+              alt={`Portfolio piece ${selectedImage + 1}`}
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+          </div>
+
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+            {selectedImage + 1} / {portfolioImages.length}
+          </div>
+        </div>
+      )}
 
 
       {/* Pricing Section */}
