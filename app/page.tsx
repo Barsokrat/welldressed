@@ -6,26 +6,27 @@ import { getTranslation, type Language } from './i18n'
 import Image from 'next/image'
 
 const portfolioImages = [
-  'IMG_0247.JPG',
-  'IMG_1566.JPG',
-  'IMG_2366.jpg',
-  'IMG_2860.JPG',
-  'IMG_4402.JPG',
-  'IMG_4740.JPG',
-  'IMG_5391.JPG',
-  'IMG_5392.JPG',
-  'IMG_5571.JPG',
-  'IMG_5874.JPG',
-  'IMG_5875.JPG',
-  'IMG_6570.JPG',
-  'IMG_8023.PNG',
-  'IMG_8946.JPG',
+  '1.JPG',
+  '2.jpg',
+  '3.JPG',
+  '4.JPG',
+  '5.JPG',
+  '6.JPG',
+  '7.JPG',
+  '8.JPG',
+  '9.JPG',
+  '10.JPG',
+  '11.JPG',
+  '12.JPG',
+  '13.jpg',
 ];
 
 export default function HomePage() {
   const [lang, setLang] = useState<Language>('en')
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
   const t = getTranslation(lang)
 
   const toggleLanguage = () => {
@@ -60,6 +61,23 @@ export default function HomePage() {
     setCurrentSlide((prev) => (prev - 1 + Math.ceil(portfolioImages.length / 4)) % Math.ceil(portfolioImages.length / 4))
   }
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 75) {
+      nextSlide()
+    }
+    if (touchStart - touchEnd < -75) {
+      prevSlide()
+    }
+  }
+
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture" lang={lang}>
       {/* Language Toggle */}
@@ -76,15 +94,16 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '800px', marginBottom: 'clamp(0px, 3vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
-            <div className="inline-block mb-1 sm:mb-2">
-              <Image
-                src="/logo.png"
-                alt="WellDressed Logo"
-                width={200}
-                height={200}
-                className="mx-auto"
-                priority
-              />
+            <div className="inline-block mb-1 sm:mb-2 relative">
+              <div className="relative w-[200px] h-[200px] mx-auto rounded-full overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/IMG_0247.JPG"
+                  alt="Yana Boro - Master Seamstress"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
             <h1 className="font-bold text-[#CA9E76] mb-4 sm:mb-6" style={{fontSize: 'clamp(3rem, 12vw, 7rem)', lineHeight: '1.1'}}>
               {t.hero.title}
@@ -201,7 +220,12 @@ export default function HomePage() {
 
           {/* Carousel */}
           <div className="relative">
-            <div className="overflow-hidden">
+            <div
+              className="overflow-hidden"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div
                 className="flex transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -211,10 +235,14 @@ export default function HomePage() {
                     {portfolioImages.slice(slideIdx * 4, slideIdx * 4 + 4).map((img, idx) => {
                       const actualIdx = slideIdx * 4 + idx;
                       return (
-                        <div
+                        <button
                           key={actualIdx}
-                          onClick={() => openModal(actualIdx)}
-                          className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            openModal(actualIdx);
+                          }}
+                          className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer bg-transparent border-0 p-0 w-full"
                         >
                           <Image
                             src={`/images/${img}`}
@@ -223,7 +251,7 @@ export default function HomePage() {
                             className="object-cover"
                             sizes="(max-width: 768px) 50vw, 25vw"
                           />
-                        </div>
+                        </button>
                       );
                     })}
                   </div>
@@ -234,27 +262,27 @@ export default function HomePage() {
             {/* Carousel Navigation */}
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg transition-all z-10"
               aria-label="Previous"
             >
-              <ChevronLeft className="w-6 h-6 text-[#CA9E76]" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#CA9E76]" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg transition-all z-10"
               aria-label="Next"
             >
-              <ChevronRight className="w-6 h-6 text-[#CA9E76]" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#CA9E76]" />
             </button>
 
             {/* Dots */}
-            <div className="flex justify-center gap-2 mt-6">
+            <div className="flex justify-center gap-2 mt-6 mb-2">
               {Array.from({ length: Math.ceil(portfolioImages.length / 4) }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    idx === currentSlide ? 'bg-[#CA9E76] w-8' : 'bg-[#CA9E76]/30'
+                  className={`h-2 rounded-full transition-all ${
+                    idx === currentSlide ? 'bg-[#CA9E76] w-8' : 'bg-[#CA9E76]/30 w-2'
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
