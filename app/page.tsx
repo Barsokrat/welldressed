@@ -321,7 +321,7 @@ export default function HomePage() {
 
 
       {/* Contact Section */}
-      <section id="contact" className="px-8 sm:px-12 pb-16">
+      <section id="contact" className="px-8 sm:px-12 mb-20">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-12">
             <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
@@ -341,7 +341,7 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147] mb-1">WhatsApp</p>
+              <p className="text-sm text-[#364147] mb-0">WhatsApp</p>
               <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
             </a>
 
@@ -350,7 +350,7 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147] mb-1">{t.contact.phone}</p>
+              <p className="text-sm text-[#364147] mb-0">{t.contact.phone}</p>
               <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
             </a>
 
@@ -359,7 +359,7 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Mail className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147] mb-1">{t.contact.email}</p>
+              <p className="text-sm text-[#364147] mb-0">{t.contact.email}</p>
               <p className="font-semibold text-[#364147] text-sm">yana@welldressed.ae</p>
             </a>
 
@@ -370,7 +370,7 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Instagram className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147] mb-1">Instagram</p>
+              <p className="text-sm text-[#364147] mb-0">Instagram</p>
               <p className="font-semibold text-[#364147] text-sm">@yanboroboro</p>
             </a>
           </div>
@@ -378,7 +378,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="pt-8 pb-8 px-8 sm:px-12 bg-[#5C4033]">
+      <footer className="pt-12 pb-12 px-8 sm:px-12 bg-[#5C4033]">
         <div className="w-full mx-auto text-center" style={{maxWidth: '800px'}}>
           <div className="mb-2">
             <Image
