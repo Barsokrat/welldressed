@@ -33,6 +33,10 @@ export const translations = {
       accessories: 'Accessories',
       recycling: 'Recycling',
     },
+    portfolio: {
+      title: 'My Work',
+      subtitle: 'Examples of custom pieces I\'ve created',
+    },
     pricing: {
       title: 'Pricing',
       currency: 'AED',
@@ -130,6 +134,10 @@ export const translations = {
       corsets: 'Корсеты',
       accessories: 'Аксессуары',
       recycling: 'Переделка',
+    },
+    portfolio: {
+      title: 'Мои работы',
+      subtitle: 'Примеры созданных изделий',
     },
     pricing: {
       title: 'Прайс',

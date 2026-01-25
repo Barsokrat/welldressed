@@ -141,6 +141,51 @@ export default function HomePage() {
       </section>
 
 
+      {/* Portfolio Section */}
+      <section id="portfolio" className="px-8 sm:px-12">
+        <div className="w-full mx-auto" style={{maxWidth: '1200px'}}>
+          <div className="text-center mb-16">
+            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+              {t.portfolio.title}
+            </h2>
+            <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
+            <p className="text-xl text-[#364147]">{t.portfolio.subtitle}</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              'IMG_0247.JPG',
+              'IMG_1566.JPG',
+              'IMG_2860.JPG',
+              'IMG_4402.JPG',
+              'IMG_4740.JPG',
+              'IMG_5391.JPG',
+              'IMG_5392.JPG',
+              'IMG_5571.JPG',
+              'IMG_5874.JPG',
+              'IMG_5875.JPG',
+              'IMG_6570.JPG',
+              'IMG_8023.PNG',
+              'IMG_8946.JPG',
+            ].map((img, idx) => (
+              <div
+                key={idx}
+                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square"
+              >
+                <Image
+                  src={`/images/${img}`}
+                  alt={`Portfolio piece ${idx + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Pricing Section */}
       <section id="pricing" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
