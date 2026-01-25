@@ -29,7 +29,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px', marginBottom: 'clamp(0px, 15vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
-            <div className="inline-block mb-6 sm:mb-8">
+            <div className="inline-block mb-4 sm:mb-6">
               <Image
                 src="/logo.png"
                 alt="WellDressed Logo"
