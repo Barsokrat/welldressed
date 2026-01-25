@@ -1,18 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @font-face {
-  font-family: 'Colombia Sans';
-  src: url('/fonts/colombia-regular.ttf') format('truetype');
+  font-family: 'Yorkie';
+  src: url('/fonts/YorkieDEMO-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yorkie';
+  src: url('/fonts/YorkieDEMO-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yorkie';
+  src: url('/fonts/YorkieDEMO-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Colombia Sans';
-  src: url('/fonts/colombia-italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
+  font-family: 'Yorkie';
+  src: url('/fonts/YorkieDEMO-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -41,8 +57,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Colombia Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  font-weight: 400;
+  font-family: 'Yorkie', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-weight: 200;
 }
 
 /* Graph paper texture - millimeter grid */
