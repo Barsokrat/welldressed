@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Scissors, Heart, Award, Mail, Phone, MessageCircle, Instagram } from 'lucide-react'
 import { getTranslation, type Language } from './i18n'
+import Image from 'next/image'
 
 export default function HomePage() {
   const [lang, setLang] = useState<Language>('en')
@@ -28,8 +29,15 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px', marginBottom: 'clamp(0px, 15vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
-            <div className="inline-block">
-              <Scissors className="w-16 sm:w-20 h-16 sm:h-20 mx-auto mb-6 sm:mb-8 text-[#D4AF37]" strokeWidth={1.5} />
+            <div className="inline-block mb-6 sm:mb-8">
+              <Image
+                src="/logo.png"
+                alt="WellDressed Logo"
+                width={160}
+                height={160}
+                className="mx-auto"
+                priority
+              />
             </div>
             <h1 className="font-bold text-[#5C4033] mb-4 sm:mb-6 leading-tight" style={{fontSize: 'clamp(3rem, 12vw, 7rem)'}}>
               {t.hero.title}
@@ -383,6 +391,15 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="py-8 px-8 sm:px-12 bg-[#5C4033] text-white">
         <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
+          <div className="mb-4">
+            <Image
+              src="/logo.png"
+              alt="WellDressed Logo"
+              width={80}
+              height={80}
+              className="mx-auto opacity-90"
+            />
+          </div>
           <p className="text-lg mb-2">{t.footer.tagline}</p>
           <p className="text-sm text-white/70">{t.footer.rights}</p>
         </div>
