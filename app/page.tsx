@@ -67,9 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="py-20">
-        <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
-      </div>
+      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* About Section */}
       <section id="about" className="px-8 sm:px-12">
