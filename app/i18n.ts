@@ -86,7 +86,7 @@ export const translations = {
     },
     footer: {
       tagline: 'Crafted with love in Abu Dhabi',
-      rights: '© 2026 Yana Borodulina. All rights reserved.',
+      rights: '© 2026 Yana Boro. All rights reserved.',
     },
   },
   ru: {
