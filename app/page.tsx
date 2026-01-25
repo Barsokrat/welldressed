@@ -271,12 +271,37 @@ export default function HomePage() {
       </section>
 
 
+      {/* Process Section */}
+      <section id="process" className="px-8 sm:px-12">
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
+          <div className="text-center mb-12">
+            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+              {t.process.title}
+            </h2>
+            <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+            <ul className="space-y-6">
+              {t.process.steps.map((step, idx) => (
+                <li key={idx} className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#CA9E76] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white font-semibold text-sm">{idx + 1}</span>
+                  </div>
+                  <p className="text-[#364147] leading-relaxed pt-1" style={{fontSize: '1rem'}}>{step}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
       {/* Training Section */}
       <section id="training" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="text-center mb-8">
-              <div className="text-6xl mb-4">🎓</div>
               <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
                 {t.training.title}
               </h2>

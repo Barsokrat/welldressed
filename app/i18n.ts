@@ -63,6 +63,16 @@ export const translations = {
         jacket: 'Jacket (structured, lined, darts, collar)',
       },
     },
+    process: {
+      title: 'How We Work Together',
+      steps: [
+        'You come to me with an idea',
+        'I refine the details, take measurements, and together we finalize the design',
+        'We go fabric shopping, or I provide recommendations',
+        'You come for a fitting - we check the fit and make adjustments if needed. Sometimes two fittings are required',
+        'You pick up your finished garment',
+      ],
+    },
     training: {
       title: 'Sewing Training',
       subtitle: 'Learn Professional Tailoring',
@@ -150,6 +160,16 @@ export const translations = {
         vestLined: 'Жилет на подкладке (костюмный вариант)',
         jacket: 'Жакет (структура, подкладка, вытачки, воротник)',
       },
+    },
+    process: {
+      title: 'Как проходит наше общение',
+      steps: [
+        'Вы приходите ко мне с идеей',
+        'Я уточняю детали, снимаю мерки, мы вместе утверждаем окончательную модель',
+        'Едем за материалом, либо я даю чёткие рекомендации по выбору',
+        'Через время вы приходите на примерку - мы смотрим, хорошо ли садится вещь, не нужны ли корректировки. В некоторых случаях примерки может быть две',
+        'Далее вы приходите за готовым изделием',
+      ],
     },
     training: {
       title: 'Обучение шитью',
