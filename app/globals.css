@@ -156,3 +156,8 @@ footer {
   padding-bottom: 2rem !important;
   min-height: 100px;
 }
+
+/* Language toggle button - ensure white text on all devices */
+button {
+  color: white !important;
+}

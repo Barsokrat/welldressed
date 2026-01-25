@@ -56,7 +56,7 @@ export default function HomePage() {
             <span className="hero-text font-semibold text-base sm:text-lg text-[#364147]">{t.hero.experience}</span>
           </div>
 
-          <div className="fade-in delay-200 mb-8 sm:mb-12">
+          <div className="fade-in delay-200 mb-4 sm:mb-8">
             <a
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
