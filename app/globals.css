@@ -32,12 +32,10 @@ body {
   color: var(--color-brown);
 }
 
-/* Увеличение размера для Ysabeau Infant (русский язык) */
-body:lang(ru),
+/* Небольшое увеличение размера для Ysabeau Infant (русский язык) */
 body:lang(ru) *,
-[lang="ru"],
 [lang="ru"] * {
-  font-size: 1.15em;
+  font-size: 1.05em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,20 +51,15 @@ h3 {
   font-size: 1.75rem !important;
 }
 
-/* Дополнительное увеличение заголовков для русского */
-:lang(ru) h1,
-[lang="ru"] h1 {
-  font-size: 1.15em;
-}
-
+/* Небольшое дополнительное увеличение заголовков для русского */
 :lang(ru) h2,
 [lang="ru"] h2 {
-  font-size: 2.8rem !important;
+  font-size: 2.6rem !important;
 }
 
 :lang(ru) h3,
 [lang="ru"] h3 {
-  font-size: 1.95rem !important;
+  font-size: 1.85rem !important;
 }
 
 /* Graph paper texture - millimeter grid */
