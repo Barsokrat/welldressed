@@ -95,12 +95,12 @@ export default function HomePage() {
         <div className="w-full text-center" style={{maxWidth: '800px', marginBottom: 'clamp(0px, 3vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
             <div className="inline-block mb-1 sm:mb-2 relative">
-              <div className="relative w-[200px] h-[200px] mx-auto rounded-full overflow-hidden shadow-2xl">
+              <div className="relative w-[200px] h-[200px] mx-auto">
                 <Image
-                  src="/images/IMG_0247.JPG"
-                  alt="Yana Boro - Master Seamstress"
+                  src="/logo.png"
+                  alt="Yana Boro Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>
