@@ -14,7 +14,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture">
+    <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture" lang={lang}>
       {/* Language Toggle */}
       <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
         <button
@@ -118,7 +118,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
@@ -394,7 +394,7 @@ export default function HomePage() {
             />
           </div>
           <p className="text-base mb-2 text-[#CA9E76]">{t.footer.tagline}</p>
-          <p className="text-xs text-[#CA9E76]/70">{t.footer.rights}</p>
+          <p className="text-xs text-[#CA9E76]/70 mb-4">{t.footer.rights}</p>
         </div>
       </footer>
     </div>

@@ -32,6 +32,14 @@ body {
   color: var(--color-brown);
 }
 
+/* Увеличение размера для Ysabeau Infant (русский язык) */
+body:lang(ru),
+body:lang(ru) *,
+[lang="ru"],
+[lang="ru"] * {
+  font-size: 1.15em;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Columbia Sans', 'Ysabeau Infant', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-weight: 400;
@@ -43,6 +51,22 @@ h2 {
 
 h3 {
   font-size: 1.75rem !important;
+}
+
+/* Дополнительное увеличение заголовков для русского */
+:lang(ru) h1,
+[lang="ru"] h1 {
+  font-size: 1.15em;
+}
+
+:lang(ru) h2,
+[lang="ru"] h2 {
+  font-size: 2.8rem !important;
+}
+
+:lang(ru) h3,
+[lang="ru"] h3 {
+  font-size: 1.95rem !important;
 }
 
 /* Graph paper texture - millimeter grid */
