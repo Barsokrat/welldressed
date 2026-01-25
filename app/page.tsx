@@ -110,7 +110,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section id="services" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
+        <div className="w-full mx-auto" style={{maxWidth: '1000px'}}>
           <div className="text-center mb-16">
             <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.services.title}
@@ -118,17 +118,20 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
               { icon: '👚', title: t.services.blouses },
               { icon: '👖', title: t.services.trousers },
               { icon: '🧥', title: t.services.jackets },
+              { icon: '🩱', title: t.services.corsets },
+              { icon: '👜', title: t.services.accessories },
+              { icon: '♻️', title: t.services.recycling },
             ].map((service, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-36"
+                className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="font-semibold text-[#CA9E76] text-sm">
@@ -379,9 +382,9 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 px-8 sm:px-12 bg-[#5C4033] text-white">
+      <footer className="py-4 px-8 sm:px-12 bg-[#5C4033] text-white">
         <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
-          <div className="mb-4">
+          <div className="mb-3">
             <Image
               src="/logo.png"
               alt="WellDressed Logo"
@@ -390,7 +393,7 @@ export default function HomePage() {
               className="mx-auto opacity-90"
             />
           </div>
-          <p className="text-lg mb-2">{t.footer.tagline}</p>
+          <p className="text-lg mb-1">{t.footer.tagline}</p>
           <p className="text-sm text-white/70">{t.footer.rights}</p>
         </div>
       </footer>

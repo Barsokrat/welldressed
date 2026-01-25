@@ -29,6 +29,9 @@ export const translations = {
       blouses: 'Blouses & Tops',
       trousers: 'Trousers',
       jackets: 'Vests & Jackets',
+      corsets: 'Corsets',
+      accessories: 'Accessories',
+      recycling: 'Recycling',
     },
     pricing: {
       title: 'Pricing',
@@ -114,6 +117,9 @@ export const translations = {
       blouses: 'Блузки и Топы',
       trousers: 'Брюки',
       jackets: 'Жилеты и Жакеты',
+      corsets: 'Корсеты',
+      accessories: 'Аксессуары',
+      recycling: 'Переделка',
     },
     pricing: {
       title: 'Прайс',
