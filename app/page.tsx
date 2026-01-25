@@ -27,7 +27,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
-        <div className="w-full text-center" style={{maxWidth: '800px', marginBottom: 'clamp(0px, 15vh, 300px)'}}>
+        <div className="w-full text-center" style={{maxWidth: '800px', marginBottom: 'clamp(0px, 3vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
             <div className="inline-block mb-1 sm:mb-2">
               <Image
@@ -285,10 +285,10 @@ export default function HomePage() {
             <ul className="space-y-6">
               {t.process.steps.map((step, idx) => (
                 <li key={idx} className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#CA9E76] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-full bg-[#CA9E76] flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-semibold text-sm">{idx + 1}</span>
                   </div>
-                  <p className="text-[#364147] leading-relaxed pt-1" style={{fontSize: '1rem'}}>{step}</p>
+                  <p className="text-[#364147] leading-relaxed" style={{fontSize: '1rem', marginTop: '0.125rem'}}>{step}</p>
                 </li>
               ))}
             </ul>
