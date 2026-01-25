@@ -45,11 +45,11 @@ h3 {
   font-size: 1.75rem !important;
 }
 
-/* Увеличение базового размера текста для русского */
-:lang(ru) p,
-[lang="ru"] p,
-:lang(ru) span,
-[lang="ru"] span,
+/* Увеличение базового размера текста для русского (кроме hero section) */
+:lang(ru) p:not(.hero-text),
+[lang="ru"] p:not(.hero-text),
+:lang(ru) span:not(.hero-text),
+[lang="ru"] span:not(.hero-text),
 :lang(ru) li,
 [lang="ru"] li {
   font-size: 1.05rem !important;

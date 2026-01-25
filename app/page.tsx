@@ -43,17 +43,17 @@ export default function HomePage() {
               {t.hero.title}
             </h1>
             <div className="w-32 sm:w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-6 sm:mb-8"></div>
-            <p className="font-medium text-[#364147] mb-2 sm:mb-3" style={{fontSize: 'clamp(1.5rem, 5vw, 2.5rem)'}}>
+            <p className="hero-text font-medium text-[#364147] mb-2 sm:mb-3" style={{fontSize: 'clamp(1.5rem, 5vw, 2.5rem)'}}>
               {t.hero.subtitle}
             </p>
-            <p className="text-[#364147]" style={{fontSize: 'clamp(1.25rem, 4vw, 1.75rem)'}}>
+            <p className="hero-text text-[#364147]" style={{fontSize: 'clamp(1.25rem, 4vw, 1.75rem)'}}>
               {t.hero.tagline}
             </p>
           </div>
 
           <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg mb-24 sm:mb-32 fade-in delay-100">
             <Award className="w-5 sm:w-6 h-5 sm:h-6 text-[#CA9E76]" />
-            <span className="font-semibold text-base sm:text-lg text-[#364147]">{t.hero.experience}</span>
+            <span className="hero-text font-semibold text-base sm:text-lg text-[#364147]">{t.hero.experience}</span>
           </div>
 
           <div className="fade-in delay-200 mb-12 sm:mb-20">
@@ -118,7 +118,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
