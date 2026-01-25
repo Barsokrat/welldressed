@@ -19,7 +19,7 @@ export default function HomePage() {
       <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
         <button
           onClick={toggleLanguage}
-          className="bg-white/90 backdrop-blur-sm px-6 py-3 sm:px-5 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base sm:text-sm text-[#364147]"
+          className="bg-[#CA9E76] backdrop-blur-sm px-6 py-3 sm:px-5 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base sm:text-sm text-white hover:bg-[#BA8E66]"
         >
           {lang === 'en' ? 'RU' : 'EN'}
         </button>
@@ -29,7 +29,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px', marginBottom: 'clamp(0px, 15vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
-            <div className="inline-block mb-2 sm:mb-4">
+            <div className="inline-block mb-1 sm:mb-2">
               <Image
                 src="/logo.png"
                 alt="WellDressed Logo"
@@ -86,14 +86,11 @@ export default function HomePage() {
           </div>
 
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
-            <div className="flex items-start gap-4 mb-6">
-              <Heart className="w-8 h-8 text-[#E8C4C4] flex-shrink-0 mt-0.5" />
-              <p className="text-[#364147] leading-relaxed" style={{fontSize: '1rem'}}>
-                {t.about.description}
-              </p>
-            </div>
+            <p className="text-[#364147] leading-relaxed mb-6" style={{fontSize: '1rem'}}>
+              {t.about.description}
+            </p>
 
-            <div className="space-y-4 mt-10 pt-6" style={{borderTop: '2px dashed #E8C4C4'}}>
+            <div className="space-y-4 pt-6" style={{borderTop: '2px dashed #E8C4C4'}}>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#D4AF37] mt-2 flex-shrink-0"></div>
                 <p className="text-[#364147]" style={{fontSize: '1rem'}}>{t.about.location}</p>
