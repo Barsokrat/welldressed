@@ -183,20 +183,27 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 min-[640px]:grid-cols-4 gap-6 lg:gap-8">
             {[
-              { icon: '👗', title: t.services.dresses },
-              { icon: '🎽', title: t.services.skirts },
-              { icon: '👚', title: t.services.blouses },
-              { icon: '👖', title: t.services.trousers },
-              { icon: '🧥', title: t.services.jackets },
-              { icon: '🩱', title: t.services.corsets },
-              { icon: '👜', title: t.services.accessories },
-              { icon: '♻️', title: t.services.recycling },
+              { icon: '/icons/1. dresses.png', title: t.services.dresses },
+              { icon: '/icons/2. skirts.png', title: t.services.skirts },
+              { icon: '/icons/3. blouses.png', title: t.services.blouses },
+              { icon: '/icons/4. trousers.png', title: t.services.trousers },
+              { icon: '/icons/5. blazers.png', title: t.services.jackets },
+              { icon: '/icons/6. corsets.png', title: t.services.corsets },
+              { icon: '/icons/7. accessories.png', title: t.services.accessories },
+              { icon: '/icons/8. recycling.png', title: t.services.recycling },
             ].map((service, idx) => (
               <div
                 key={idx}
                 className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[160px] flex flex-col items-center justify-center"
               >
-                <div className="text-6xl mb-4">{service.icon}</div>
+                <div className="relative w-16 h-16 mb-4">
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h3 className="font-semibold text-[#CA9E76] text-base">
                   {service.title}
                 </h3>
