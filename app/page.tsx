@@ -25,7 +25,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center py-12 sm:py-20 px-6 sm:px-12">
+      <section className="relative min-h-screen flex items-center justify-center py-12 sm:py-20 sm:pb-32 px-6 sm:px-12">
         <div className="w-full text-center" style={{maxWidth: '700px'}}>
           <div className="mb-8 sm:mb-10 fade-in">
             <div className="inline-block">
