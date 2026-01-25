@@ -19,7 +19,7 @@ export default function HomePage() {
       <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
         <button
           onClick={toggleLanguage}
-          className="bg-white/90 backdrop-blur-sm px-6 py-3 sm:px-5 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base sm:text-sm text-[#5C4033]"
+          className="bg-white/90 backdrop-blur-sm px-6 py-3 sm:px-5 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base sm:text-sm text-[#364147]"
         >
           {lang === 'en' ? 'RU' : 'EN'}
         </button>
@@ -43,17 +43,17 @@ export default function HomePage() {
               {t.hero.title}
             </h1>
             <div className="w-32 sm:w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-6 sm:mb-8"></div>
-            <p className="font-medium text-[#8B7355] mb-2 sm:mb-3" style={{fontSize: 'clamp(1.5rem, 5vw, 2.5rem)'}}>
+            <p className="font-medium text-[#364147] mb-2 sm:mb-3" style={{fontSize: 'clamp(1.5rem, 5vw, 2.5rem)'}}>
               {t.hero.subtitle}
             </p>
-            <p className="text-[#8B7355]" style={{fontSize: 'clamp(1.25rem, 4vw, 1.75rem)'}}>
+            <p className="text-[#364147]" style={{fontSize: 'clamp(1.25rem, 4vw, 1.75rem)'}}>
               {t.hero.tagline}
             </p>
           </div>
 
           <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg mb-24 sm:mb-32 fade-in delay-100">
             <Award className="w-5 sm:w-6 h-5 sm:h-6 text-[#D4AF37]" />
-            <span className="font-semibold text-base sm:text-lg text-[#5C4033]">{t.hero.experience}</span>
+            <span className="font-semibold text-base sm:text-lg text-[#364147]">{t.hero.experience}</span>
           </div>
 
           <div className="fade-in delay-200 mb-12 sm:mb-20">
@@ -90,7 +90,7 @@ export default function HomePage() {
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="flex items-start gap-4 mb-6">
               <Heart className="w-8 h-8 text-[#E8C4C4] flex-shrink-0 mt-0.5" />
-              <p className="text-[#5C4033] leading-relaxed" style={{fontSize: '1rem'}}>
+              <p className="text-[#364147] leading-relaxed" style={{fontSize: '1rem'}}>
                 {t.about.description}
               </p>
             </div>
@@ -98,11 +98,11 @@ export default function HomePage() {
             <div className="space-y-4 mt-10 pt-6" style={{borderTop: '2px dashed #E8C4C4'}}>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#D4AF37] mt-2 flex-shrink-0"></div>
-                <p className="text-[#8B7355]" style={{fontSize: '1rem'}}>{t.about.location}</p>
+                <p className="text-[#364147]" style={{fontSize: '1rem'}}>{t.about.location}</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#D4AF37] mt-2 flex-shrink-0"></div>
-                <p className="text-[#8B7355]" style={{fontSize: '1rem'}}>{t.about.specialty}</p>
+                <p className="text-[#364147]" style={{fontSize: '1rem'}}>{t.about.specialty}</p>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
               {t.pricing.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
-            <p className="text-sm text-[#8B7355]">{lang === 'en' ? 'All prices in AED' : 'Все цены в AED'}</p>
+            <p className="text-sm text-[#364147]">{lang === 'en' ? 'All prices in AED' : 'Все цены в AED'}</p>
           </div>
 
           <div className="space-y-6">
@@ -167,20 +167,20 @@ export default function HomePage() {
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.skirts.simple}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">250–350</span>
+                  <span className="text-[#364147]">{t.pricing.skirts.simple}</span>
+                  <span className="font-semibold text-[#364147] ml-4">250–350</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.skirts.circle}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">300–400</span>
+                  <span className="text-[#364147]">{t.pricing.skirts.circle}</span>
+                  <span className="font-semibold text-[#364147] ml-4">300–400</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.skirts.gathered}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">350–450</span>
+                  <span className="text-[#364147]">{t.pricing.skirts.gathered}</span>
+                  <span className="font-semibold text-[#364147] ml-4">350–450</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.skirts.lined}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">450–600</span>
+                  <span className="text-[#364147]">{t.pricing.skirts.lined}</span>
+                  <span className="font-semibold text-[#364147] ml-4">450–600</span>
                 </li>
               </ul>
             </div>
@@ -193,16 +193,16 @@ export default function HomePage() {
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.dresses.casual}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">400–600</span>
+                  <span className="text-[#364147]">{t.pricing.dresses.casual}</span>
+                  <span className="font-semibold text-[#364147] ml-4">400–600</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.dresses.boho}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">500–700</span>
+                  <span className="text-[#364147]">{t.pricing.dresses.boho}</span>
+                  <span className="font-semibold text-[#364147] ml-4">500–700</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.dresses.evening}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">{lang === 'en' ? 'from' : 'от'} 1000</span>
+                  <span className="text-[#364147]">{t.pricing.dresses.evening}</span>
+                  <span className="font-semibold text-[#364147] ml-4">{lang === 'en' ? 'from' : 'от'} 1000</span>
                 </li>
               </ul>
             </div>
@@ -215,16 +215,16 @@ export default function HomePage() {
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.blouses.simple}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">200–300</span>
+                  <span className="text-[#364147]">{t.pricing.blouses.simple}</span>
+                  <span className="font-semibold text-[#364147] ml-4">200–300</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.blouses.detailed}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">300–400</span>
+                  <span className="text-[#364147]">{t.pricing.blouses.detailed}</span>
+                  <span className="font-semibold text-[#364147] ml-4">300–400</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.blouses.corset}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">350–700</span>
+                  <span className="text-[#364147]">{t.pricing.blouses.corset}</span>
+                  <span className="font-semibold text-[#364147] ml-4">350–700</span>
                 </li>
               </ul>
             </div>
@@ -237,16 +237,16 @@ export default function HomePage() {
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.trousers.simple}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">300–400</span>
+                  <span className="text-[#364147]">{t.pricing.trousers.simple}</span>
+                  <span className="font-semibold text-[#364147] ml-4">300–400</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.trousers.tailored}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">{lang === 'en' ? 'from' : 'от'} 600</span>
+                  <span className="text-[#364147]">{t.pricing.trousers.tailored}</span>
+                  <span className="font-semibold text-[#364147] ml-4">{lang === 'en' ? 'from' : 'от'} 600</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.trousers.wide}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">350–500</span>
+                  <span className="text-[#364147]">{t.pricing.trousers.wide}</span>
+                  <span className="font-semibold text-[#364147] ml-4">350–500</span>
                 </li>
               </ul>
             </div>
@@ -259,16 +259,16 @@ export default function HomePage() {
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.jackets.vestSimple}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">250–350</span>
+                  <span className="text-[#364147]">{t.pricing.jackets.vestSimple}</span>
+                  <span className="font-semibold text-[#364147] ml-4">250–350</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.jackets.vestLined}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">350–500</span>
+                  <span className="text-[#364147]">{t.pricing.jackets.vestLined}</span>
+                  <span className="font-semibold text-[#364147] ml-4">350–500</span>
                 </li>
                 <li className="flex justify-between items-start">
-                  <span className="text-[#8B7355]">{t.pricing.jackets.jacket}</span>
-                  <span className="font-semibold text-[#5C4033] ml-4">{lang === 'en' ? 'from' : 'от'} 900</span>
+                  <span className="text-[#364147]">{t.pricing.jackets.jacket}</span>
+                  <span className="font-semibold text-[#364147] ml-4">{lang === 'en' ? 'from' : 'от'} 900</span>
                 </li>
               </ul>
             </div>
@@ -289,12 +289,12 @@ export default function HomePage() {
                 {t.training.title}
               </h2>
               <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
-              <p className="text-xl text-[#8B7355]">
+              <p className="text-xl text-[#364147]">
                 {t.training.subtitle}
               </p>
             </div>
 
-            <p className="text-center text-[#5C4033] mb-8 text-lg">
+            <p className="text-center text-[#364147] mb-8 text-lg">
               {t.training.description}
             </p>
 
@@ -304,7 +304,7 @@ export default function HomePage() {
                   <div className="w-6 h-6 rounded-full bg-[#D4AF37] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm">✓</span>
                   </div>
-                  <span className="text-[#5C4033]">{feature}</span>
+                  <span className="text-[#364147]">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -335,7 +335,7 @@ export default function HomePage() {
               {t.contact.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
-            <p className="text-xl text-[#8B7355]">
+            <p className="text-xl text-[#364147]">
               {t.contact.message}
             </p>
           </div>
@@ -348,8 +348,8 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
-              <p className="text-sm text-[#8B7355] mb-2">WhatsApp</p>
-              <p className="font-semibold text-[#5C4033] text-sm">+971 52 623 2050</p>
+              <p className="text-sm text-[#364147] mb-2">WhatsApp</p>
+              <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
             </a>
 
             <a
@@ -357,8 +357,8 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
-              <p className="text-sm text-[#8B7355] mb-2">{t.contact.phone}</p>
-              <p className="font-semibold text-[#5C4033] text-sm">+971 52 623 2050</p>
+              <p className="text-sm text-[#364147] mb-2">{t.contact.phone}</p>
+              <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
             </a>
 
             <a
@@ -366,8 +366,8 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Mail className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
-              <p className="text-sm text-[#8B7355] mb-2">{t.contact.email}</p>
-              <p className="font-semibold text-[#5C4033] text-sm">yana@welldressed.ae</p>
+              <p className="text-sm text-[#364147] mb-2">{t.contact.email}</p>
+              <p className="font-semibold text-[#364147] text-sm">yana@welldressed.ae</p>
             </a>
 
             <a
@@ -377,13 +377,13 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Instagram className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
-              <p className="text-sm text-[#8B7355] mb-2">Instagram</p>
-              <p className="font-semibold text-[#5C4033] text-sm">@yanboroboro</p>
+              <p className="text-sm text-[#364147] mb-2">Instagram</p>
+              <p className="font-semibold text-[#364147] text-sm">@yanboroboro</p>
             </a>
           </div>
 
           <div className="text-center mt-8 pt-8 border-t border-[#E8C4C4]">
-            <p className="text-[#8B7355]">{t.contact.location}</p>
+            <p className="text-[#364147]">{t.contact.location}</p>
           </div>
         </div>
       </section>
@@ -395,8 +395,8 @@ export default function HomePage() {
             <Image
               src="/logo.png"
               alt="WellDressed Logo"
-              width={120}
-              height={120}
+              width={150}
+              height={150}
               className="mx-auto opacity-90"
             />
           </div>
