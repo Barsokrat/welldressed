@@ -78,6 +78,7 @@ a.button-cta {
   justify-content: center;
   gap: 0.75rem;
   padding: 1.25rem 2.5rem;
+  margin-top: 3rem;
   border-radius: 9999px;
   font-weight: 700;
   font-size: 1.125rem;
