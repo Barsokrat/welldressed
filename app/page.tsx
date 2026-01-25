@@ -39,7 +39,7 @@ export default function HomePage() {
                 priority
               />
             </div>
-            <h1 className="font-bold text-[#5C4033] mb-4 sm:mb-6 leading-tight" style={{fontSize: 'clamp(3rem, 12vw, 7rem)'}}>
+            <h1 className="font-bold text-[#CA9E76] mb-4 sm:mb-6 leading-tight" style={{fontSize: 'clamp(3rem, 12vw, 7rem)'}}>
               {t.hero.title}
             </h1>
             <div className="w-32 sm:w-40 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-6 sm:mb-8"></div>
@@ -81,7 +81,7 @@ export default function HomePage() {
       <section id="about" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '700px'}}>
           <div className="text-center mb-12">
-            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.about.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
@@ -116,7 +116,7 @@ export default function HomePage() {
       <section id="services" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
           <div className="text-center mb-16">
-            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.services.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
@@ -135,7 +135,7 @@ export default function HomePage() {
                 className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-36"
               >
                 <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="font-semibold text-[#5C4033] text-sm">
+                <h3 className="font-semibold text-[#CA9E76] text-sm">
                   {service.title}
                 </h3>
               </div>
@@ -151,7 +151,7 @@ export default function HomePage() {
       <section id="pricing" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-16">
-            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.pricing.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
@@ -163,7 +163,7 @@ export default function HomePage() {
             <div className="bg-white rounded-3xl shadow-xl p-8">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E8C4C4]">
                 <span className="text-4xl">🎽</span>
-                <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.skirts}</h3>
+                <h3 className="text-2xl font-bold text-[#CA9E76]">{t.services.skirts}</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
@@ -189,7 +189,7 @@ export default function HomePage() {
             <div className="bg-white rounded-3xl shadow-xl p-8">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E8C4C4]">
                 <span className="text-4xl">👗</span>
-                <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.dresses}</h3>
+                <h3 className="text-2xl font-bold text-[#CA9E76]">{t.services.dresses}</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
@@ -211,7 +211,7 @@ export default function HomePage() {
             <div className="bg-white rounded-3xl shadow-xl p-8">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E8C4C4]">
                 <span className="text-4xl">👚</span>
-                <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.blouses}</h3>
+                <h3 className="text-2xl font-bold text-[#CA9E76]">{t.services.blouses}</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
@@ -233,7 +233,7 @@ export default function HomePage() {
             <div className="bg-white rounded-3xl shadow-xl p-8">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E8C4C4]">
                 <span className="text-4xl">👖</span>
-                <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.trousers}</h3>
+                <h3 className="text-2xl font-bold text-[#CA9E76]">{t.services.trousers}</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
@@ -255,7 +255,7 @@ export default function HomePage() {
             <div className="bg-white rounded-3xl shadow-xl p-8">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E8C4C4]">
                 <span className="text-4xl">🧥</span>
-                <h3 className="text-2xl font-bold text-[#5C4033]">{t.services.jackets}</h3>
+                <h3 className="text-2xl font-bold text-[#CA9E76]">{t.services.jackets}</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex justify-between items-start">
@@ -285,7 +285,7 @@ export default function HomePage() {
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4">🎓</div>
-              <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+              <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
                 {t.training.title}
               </h2>
               <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
@@ -331,7 +331,7 @@ export default function HomePage() {
       <section id="contact" className="px-8 sm:px-12">
         <div className="w-full mx-auto" style={{maxWidth: '600px'}}>
           <div className="text-center mb-12">
-            <h2 className="font-bold text-[#5C4033] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
               {t.contact.title}
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
@@ -389,14 +389,14 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-8 sm:px-12 bg-[#5C4033] text-white">
+      <footer className="py-10 px-8 sm:px-12 bg-[#5C4033] text-white">
         <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
-          <div className="mb-4">
+          <div className="mb-6">
             <Image
               src="/logo.png"
               alt="WellDressed Logo"
-              width={80}
-              height={80}
+              width={120}
+              height={120}
               className="mx-auto opacity-90"
             />
           </div>
