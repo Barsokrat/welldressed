@@ -48,7 +48,7 @@ export default function HomePage() {
             <span className="font-semibold text-base sm:text-lg text-[#5C4033]">{t.hero.experience}</span>
           </div>
 
-          <div className="fade-in delay-200">
+          <div className="fade-in delay-200 mb-12">
             <a
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
@@ -67,8 +67,8 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="py-16">
-        <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
+      <div className="py-20">
+        <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
       </div>
 
       {/* About Section */}
@@ -104,7 +104,7 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
+      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Services Section */}
       <section id="services" className="px-8 sm:px-12">
@@ -116,7 +116,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-10">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
@@ -139,7 +139,7 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
+      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Pricing Section */}
       <section id="pricing" className="px-8 sm:px-12">
@@ -271,7 +271,7 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
+      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Training Section */}
       <section id="training" className="px-8 sm:px-12">
@@ -303,7 +303,7 @@ export default function HomePage() {
               ))}
             </ul>
 
-            <div className="text-center">
+            <div className="text-center mb-8">
               <a
                 href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I am interested in the sewing training course.' : 'Здравствуйте! Интересует курс обучения шитью.')}`}
                 target="_blank"
@@ -319,7 +319,7 @@ export default function HomePage() {
       </section>
 
       {/* Section Divider */}
-      <div className="py-16"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
+      <div className="py-20"><div className="w-full h-px bg-gradient-to-r from-transparent via-[#E8C4C4] to-transparent"></div></div>
 
       {/* Contact Section */}
       <section id="contact" className="px-8 sm:px-12">
@@ -334,45 +334,45 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="space-y-4">
-            <a
-              href="tel:+971526232050"
-              className="block bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              <Phone className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
-              <p className="text-sm text-[#8B7355] mb-2">{t.contact.phone}</p>
-              <p className="font-semibold text-[#5C4033]">+971 52 623 2050</p>
-            </a>
-
-            <a
-              href="mailto:yana@welldressed.ae"
-              className="block bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              <Mail className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
-              <p className="text-sm text-[#8B7355] mb-2">{t.contact.email}</p>
-              <p className="font-semibold text-[#5C4033]">yana@welldressed.ae</p>
-            </a>
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <a
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to inquire about your services.' : 'Здравствуйте! Хотела бы узнать о ваших услугах.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
-              <p className="text-sm text-[#8B7355] mb-2">{t.contact.whatsapp}</p>
-              <p className="font-semibold text-[#5C4033]">+971 52 623 2050</p>
+              <p className="text-sm text-[#8B7355] mb-2">WhatsApp</p>
+              <p className="font-semibold text-[#5C4033] text-sm">+971 52 623 2050</p>
+            </a>
+
+            <a
+              href="tel:+971526232050"
+              className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <Phone className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
+              <p className="text-sm text-[#8B7355] mb-2">{t.contact.phone}</p>
+              <p className="font-semibold text-[#5C4033] text-sm">+971 52 623 2050</p>
+            </a>
+
+            <a
+              href="mailto:yana@welldressed.ae"
+              className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <Mail className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
+              <p className="text-sm text-[#8B7355] mb-2">{t.contact.email}</p>
+              <p className="font-semibold text-[#5C4033] text-sm">yana@welldressed.ae</p>
             </a>
 
             <a
               href="https://www.instagram.com/yanboroboro/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Instagram className="w-8 h-8 mx-auto mb-3 text-[#D4AF37]" />
               <p className="text-sm text-[#8B7355] mb-2">Instagram</p>
-              <p className="font-semibold text-[#5C4033]">@yanboroboro</p>
+              <p className="font-semibold text-[#5C4033] text-sm">@yanboroboro</p>
             </a>
           </div>
 
