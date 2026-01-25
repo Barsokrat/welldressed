@@ -118,7 +118,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
@@ -382,7 +382,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-3 px-8 sm:px-12 bg-[#5C4033]">
+      <footer className="pt-3 pb-6 px-8 sm:px-12 bg-[#5C4033]">
         <div className="w-full mx-auto text-center" style={{maxWidth: '600px'}}>
           <div className="mb-2">
             <Image
@@ -393,7 +393,7 @@ export default function HomePage() {
               className="mx-auto opacity-90"
             />
           </div>
-          <p className="text-base mb-1 text-[#CA9E76]">{t.footer.tagline}</p>
+          <p className="text-base mb-2 text-[#CA9E76]">{t.footer.tagline}</p>
           <p className="text-xs text-[#CA9E76]/70">{t.footer.rights}</p>
         </div>
       </footer>
