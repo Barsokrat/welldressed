@@ -196,12 +196,11 @@ export default function HomePage() {
                 key={idx}
                 className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[160px] flex flex-col items-center justify-center"
               >
-                <div className="relative w-16 h-16 mb-4">
-                  <Image
+                <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                  <img
                     src={service.icon}
                     alt={service.title}
-                    fill
-                    className="object-contain"
+                    className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <h3 className="font-semibold text-[#CA9E76] text-base">
