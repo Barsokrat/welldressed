@@ -27,7 +27,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-12">
-        <div className="w-full text-center" style={{maxWidth: '700px', marginBottom: 'clamp(0px, 15vh, 300px)'}}>
+        <div className="w-full text-center" style={{maxWidth: '800px', marginBottom: 'clamp(0px, 15vh, 300px)'}}>
           <div className="mb-8 sm:mb-10 fade-in">
             <div className="inline-block mb-1 sm:mb-2">
               <Image
@@ -56,7 +56,7 @@ export default function HomePage() {
             <span className="hero-text font-semibold text-base sm:text-lg text-[#364147]">{t.hero.experience}</span>
           </div>
 
-          <div className="fade-in delay-200 mb-12 sm:mb-20">
+          <div className="fade-in delay-200 mb-8 sm:mb-12">
             <a
               href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I would like to book a consultation for custom tailoring.' : 'Здравствуйте! Хотела бы записаться на консультацию по пошиву.')}`}
               target="_blank"
