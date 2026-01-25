@@ -118,7 +118,7 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 min-[640px]:grid-cols-4 gap-6 lg:gap-8">
             {[
               { icon: '👗', title: t.services.dresses },
               { icon: '🎽', title: t.services.skirts },
