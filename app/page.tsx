@@ -378,7 +378,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="pt-12 pb-8 px-8 sm:px-12 bg-[#5C4033]">
+      <footer className="pt-12 pb-4 px-8 sm:px-12 bg-[#5C4033]">
         <div className="w-full mx-auto text-center" style={{maxWidth: '800px'}}>
           <div className="mb-4">
             <Image
