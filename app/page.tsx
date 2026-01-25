@@ -341,8 +341,8 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147]" style={{marginBottom: 0}}>WhatsApp</p>
-              <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
+              <p className="text-sm text-[#364147]" style={{marginBottom: 0, lineHeight: '1'}}>WhatsApp</p>
+              <p className="font-semibold text-[#364147] text-sm" style={{marginTop: '0.25rem'}}>+971 52 623 2050</p>
             </a>
 
             <a
@@ -350,8 +350,8 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147]" style={{marginBottom: 0}}>{t.contact.phone}</p>
-              <p className="font-semibold text-[#364147] text-sm">+971 52 623 2050</p>
+              <p className="text-sm text-[#364147]" style={{marginBottom: 0, lineHeight: '1'}}>{t.contact.phone}</p>
+              <p className="font-semibold text-[#364147] text-sm" style={{marginTop: '0.25rem'}}>+971 52 623 2050</p>
             </a>
 
             <a
@@ -359,8 +359,8 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Mail className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147]" style={{marginBottom: 0}}>{t.contact.email}</p>
-              <p className="font-semibold text-[#364147] text-sm">yana@welldressed.ae</p>
+              <p className="text-sm text-[#364147]" style={{marginBottom: 0, lineHeight: '1'}}>{t.contact.email}</p>
+              <p className="font-semibold text-[#364147] text-sm" style={{marginTop: '0.25rem'}}>yana@welldressed.ae</p>
             </a>
 
             <a
@@ -370,17 +370,17 @@ export default function HomePage() {
               className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Instagram className="w-8 h-8 mx-auto mb-3 text-[#CA9E76]" />
-              <p className="text-sm text-[#364147]" style={{marginBottom: 0}}>Instagram</p>
-              <p className="font-semibold text-[#364147] text-sm">@yanboroboro</p>
+              <p className="text-sm text-[#364147]" style={{marginBottom: 0, lineHeight: '1'}}>Instagram</p>
+              <p className="font-semibold text-[#364147] text-sm" style={{marginTop: '0.25rem'}}>@yanboroboro</p>
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="pt-12 pb-12 px-8 sm:px-12 bg-[#5C4033]">
+      <footer className="pt-12 pb-8 px-8 sm:px-12 bg-[#5C4033]">
         <div className="w-full mx-auto text-center" style={{maxWidth: '800px'}}>
-          <div className="mb-2">
+          <div className="mb-4">
             <Image
               src="/logo.png"
               alt="WellDressed Logo"
@@ -390,7 +390,7 @@ export default function HomePage() {
             />
           </div>
           <p className="text-base mb-2 text-[#CA9E76]">{t.footer.tagline}</p>
-          <p className="text-xs text-[#CA9E76]/70 mb-4">{t.footer.rights}</p>
+          <p className="text-xs text-[#CA9E76]/70 mb-0">{t.footer.rights}</p>
         </div>
       </footer>
     </div>
