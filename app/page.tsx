@@ -256,17 +256,9 @@ export default function HomePage() {
                       return (
                         <div
                           key={actualIdx}
-                          onMouseDown={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            console.log('Image clicked:', actualIdx);
-                            openModal(actualIdx);
-                          }}
-                          onTouchStart={(e) => {
+                          onClick={(e) => {
                             if (!isDragging) {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              console.log('Image touched:', actualIdx);
+                              console.log('Image clicked:', actualIdx);
                               openModal(actualIdx);
                             }
                           }}
@@ -326,7 +318,12 @@ export default function HomePage() {
         return (
         <div
           className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
-          onClick={closeModal}
+          onClick={(e) => {
+            console.log('Modal background clicked');
+            if (e.target === e.currentTarget) {
+              closeModal();
+            }
+          }}
         >
           <button
             onClick={closeModal}
