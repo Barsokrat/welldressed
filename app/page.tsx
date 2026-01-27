@@ -30,6 +30,9 @@ export default function HomePage() {
   const [isDragging, setIsDragging] = useState(false)
   const t = getTranslation(lang)
 
+  const itemsPerSlide = 4
+  const totalSlides = Math.ceil(portfolioImages.length / itemsPerSlide)
+
   useEffect(() => {
     if (selectedImage !== null) {
       document.body.style.overflow = 'hidden'
@@ -81,11 +84,11 @@ export default function HomePage() {
   }
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % Math.ceil(portfolioImages.length / 4))
+    setCurrentSlide((prev) => (prev + 1) % totalSlides)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + Math.ceil(portfolioImages.length / 4)) % Math.ceil(portfolioImages.length / 4))
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
   }
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -303,10 +306,10 @@ export default function HomePage() {
                   className="flex transition-transform duration-500 ease-out"
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
-                    {Array.from({ length: Math.ceil(portfolioImages.length / 4) }).map((_, slideIdx) => (
+                    {Array.from({ length: totalSlides }).map((_, slideIdx) => (
                       <div key={slideIdx} className="min-w-full grid grid-cols-2 md:grid-cols-4 gap-6 px-2" style={{ padding: '0.5rem 0', overflow: 'visible' }}>
-                    {portfolioImages.slice(slideIdx * 4, slideIdx * 4 + 4).map((img, idx) => {
-                      const actualIdx = slideIdx * 4 + idx;
+                    {portfolioImages.slice(slideIdx * itemsPerSlide, slideIdx * itemsPerSlide + itemsPerSlide).map((img, idx) => {
+                      const actualIdx = slideIdx * itemsPerSlide + idx;
                       return (
                         <div
                           key={actualIdx}
@@ -350,9 +353,10 @@ export default function HomePage() {
             {/* Carousel Navigation */}
             <button
               onClick={prevSlide}
+              className="carousel-nav-left"
               style={{
                 position: 'absolute',
-                left: '-1.5rem',
+                left: '-0.5rem',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
@@ -382,9 +386,10 @@ export default function HomePage() {
             </button>
             <button
               onClick={nextSlide}
+              className="carousel-nav-right"
               style={{
                 position: 'absolute',
-                right: '-1.5rem',
+                right: '-0.5rem',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
@@ -415,7 +420,7 @@ export default function HomePage() {
 
             {/* Dots */}
             <div className="flex justify-center gap-2 mt-6 mb-2">
-              {Array.from({ length: Math.ceil(portfolioImages.length / 4) }).map((_, idx) => (
+              {Array.from({ length: totalSlides }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}

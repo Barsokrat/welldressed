@@ -162,3 +162,18 @@ footer {
 button.bg-\[#CA9E76\] {
   color: white !important;
 }
+
+/* Remove button focus outline */
+button:focus {
+  outline: none;
+}
+
+/* Carousel navigation buttons - responsive positioning */
+@media (min-width: 768px) {
+  .carousel-nav-left {
+    left: -1.5rem !important;
+  }
+  .carousel-nav-right {
+    right: -1.5rem !important;
+  }
+}
