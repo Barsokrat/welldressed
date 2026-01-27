@@ -43,6 +43,7 @@ export default function HomePage() {
   }
 
   const closeModal = () => {
+    console.log('closeModal called');
     setSelectedImage(null)
   }
 
@@ -320,9 +321,11 @@ export default function HomePage() {
       </section>
 
       {/* Modal */}
-      {selectedImage !== null && (
+      {selectedImage !== null && (() => {
+        console.log('Modal is rendering! selectedImage:', selectedImage);
+        return (
         <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
           onClick={closeModal}
         >
           <button
@@ -366,7 +369,8 @@ export default function HomePage() {
             {selectedImage + 1} / {portfolioImages.length}
           </div>
         </div>
-      )}
+        );
+      })()}
 
 
       {/* Pricing Section */}
