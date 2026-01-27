@@ -748,10 +748,22 @@ export default function HomePage() {
             <ul className="space-y-6">
               {t.process.steps.map((step, idx) => (
                 <li key={idx} className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#CA9E76] flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-semibold text-sm">{idx + 1}</span>
+                  <div style={{
+                    width: '1.5rem',
+                    height: '1.5rem',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    marginTop: lang === 'ru' ? '0.95rem' : '0.85rem',
+                    marginRight: '0.5rem',
+                    boxShadow: '0 2px 8px rgba(202, 158, 118, 0.3)'
+                  }}>
+                    <span style={{color: 'white', fontWeight: '600', fontSize: '0.75rem'}}>{idx + 1}</span>
                   </div>
-                  <p className="text-[#364147] leading-relaxed" style={{fontSize: '1rem', marginTop: '0.125rem'}}>{step}</p>
+                  <p className="text-[#364147] leading-relaxed" style={{fontSize: '1rem', flex: 1}}>{step}</p>
                 </li>
               ))}
             </ul>
@@ -778,18 +790,30 @@ export default function HomePage() {
               {t.training.description}
             </p>
 
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-6 mb-8">
               {t.training.features.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#CA9E76] flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm">✓</span>
+                <li key={idx} className="flex items-start gap-4">
+                  <div style={{
+                    width: '1.5rem',
+                    height: '1.5rem',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    marginTop: '0.1rem',
+                    marginRight: '0.5rem',
+                    boxShadow: '0 2px 8px rgba(202, 158, 118, 0.3)'
+                  }}>
+                    <span style={{color: 'white', fontSize: '0.75rem', fontWeight: '600'}}>✓</span>
                   </div>
-                  <span className="text-[#364147]">{feature}</span>
+                  <span className="text-[#364147]" style={{flex: 1, lineHeight: '1.75'}}>{feature}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="text-center mb-8 sm:mb-16">
+            <div className="text-center mb-8 sm:mb-16" style={{marginTop: '-1.5rem'}}>
               <a
                 href={`https://wa.me/971526232050?text=${encodeURIComponent(lang === 'en' ? 'Hi! I am interested in the sewing training course.' : 'Здравствуйте! Интересует курс обучения шитью.')}`}
                 target="_blank"
