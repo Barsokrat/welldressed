@@ -251,9 +251,17 @@ export default function HomePage() {
                       return (
                         <div
                           key={actualIdx}
-                          onClick={(e) => {
+                          onMouseDown={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            console.log('Image clicked:', actualIdx);
+                            openModal(actualIdx);
+                          }}
+                          onTouchStart={(e) => {
                             if (!isDragging) {
+                              e.preventDefault();
                               e.stopPropagation();
+                              console.log('Image touched:', actualIdx);
                               openModal(actualIdx);
                             }
                           }}
