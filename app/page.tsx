@@ -27,6 +27,7 @@ export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
   const t = getTranslation(lang)
 
   const toggleLanguage = () => {
@@ -63,10 +64,15 @@ export default function HomePage() {
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX)
+    setTouchEnd(e.targetTouches[0].clientX)
+    setIsDragging(false)
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX)
+    if (Math.abs(touchStart - e.targetTouches[0].clientX) > 10) {
+      setIsDragging(true)
+    }
   }
 
   const handleTouchEnd = () => {
@@ -76,6 +82,7 @@ export default function HomePage() {
     if (touchStart - touchEnd < -75) {
       prevSlide()
     }
+    setTimeout(() => setIsDragging(false), 100)
   }
 
   return (
@@ -245,8 +252,10 @@ export default function HomePage() {
                         <div
                           key={actualIdx}
                           onClick={(e) => {
-                            e.stopPropagation();
-                            openModal(actualIdx);
+                            if (!isDragging) {
+                              e.stopPropagation();
+                              openModal(actualIdx);
+                            }
                           }}
                           className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer"
                         >
