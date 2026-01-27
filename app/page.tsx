@@ -30,12 +30,16 @@ export default function HomePage() {
   const [isDragging, setIsDragging] = useState(false)
   const t = getTranslation(lang)
 
+  console.log('Render - selectedImage:', selectedImage)
+
   const toggleLanguage = () => {
     setLang(prev => prev === 'en' ? 'ru' : 'en')
   }
 
   const openModal = (index: number) => {
-    setSelectedImage(index)
+    console.log('openModal called with index:', index);
+    setSelectedImage(index);
+    console.log('selectedImage state should be:', index);
   }
 
   const closeModal = () => {
