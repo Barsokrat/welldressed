@@ -158,6 +158,7 @@ footer {
 }
 
 /* Language toggle button - ensure white text on all devices */
-button {
+.bg-\[#CA9E76\] button,
+button.bg-\[#CA9E76\] {
   color: white !important;
 }

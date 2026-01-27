@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Scissors, Heart, Award, Mail, Phone, MessageCircle, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { getTranslation, type Language } from './i18n'
 import Image from 'next/image'
@@ -29,6 +29,27 @@ export default function HomePage() {
   const [touchEnd, setTouchEnd] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
   const t = getTranslation(lang)
+
+  useEffect(() => {
+    if (selectedImage !== null) {
+      document.body.style.overflow = 'hidden'
+
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          closeModal()
+        }
+      }
+
+      document.addEventListener('keydown', handleEscape)
+
+      return () => {
+        document.body.style.overflow = 'auto'
+        document.removeEventListener('keydown', handleEscape)
+      }
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [selectedImage])
 
   console.log('Render - selectedImage:', selectedImage)
 
@@ -227,30 +248,38 @@ export default function HomePage() {
 
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="px-8 sm:px-12">
-        <div className="w-full mx-auto" style={{maxWidth: '1000px'}}>
-          <div className="text-center mb-12">
-            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
-              {t.portfolio.title}
-            </h2>
-            <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
-            <p className="text-xl text-[#364147]">{t.portfolio.subtitle}</p>
+      <section id="portfolio" style={{overflow: 'visible'}}>
+        <div className="px-8 sm:px-12">
+          <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
+            <div className="text-center mb-12">
+              <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+                {t.portfolio.title}
+              </h2>
+              <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
+              <p className="text-xl text-[#364147]">{t.portfolio.subtitle}</p>
+            </div>
           </div>
+        </div>
 
-          {/* Carousel */}
-          <div className="relative">
-            <div
-              className="overflow-hidden"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
+        {/* Carousel */}
+        <div className="px-8 sm:px-12">
+          <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
+            <div className="relative" style={{padding: '2rem 0'}}>
               <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{
+                  position: 'relative',
+                  overflow: 'hidden'
+                }}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
               >
-                {Array.from({ length: Math.ceil(portfolioImages.length / 4) }).map((_, slideIdx) => (
-                  <div key={slideIdx} className="min-w-full grid grid-cols-2 md:grid-cols-4 gap-4 px-2">
+                <div
+                  className="flex transition-transform duration-500 ease-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                    {Array.from({ length: Math.ceil(portfolioImages.length / 4) }).map((_, slideIdx) => (
+                      <div key={slideIdx} className="min-w-full grid grid-cols-2 md:grid-cols-4 gap-6 px-2" style={{ padding: '0.5rem 0', overflow: 'visible' }}>
                     {portfolioImages.slice(slideIdx * 4, slideIdx * 4 + 4).map((img, idx) => {
                       const actualIdx = slideIdx * 4 + idx;
                       return (
@@ -262,7 +291,18 @@ export default function HomePage() {
                               openModal(actualIdx);
                             }
                           }}
-                          className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer"
+                          className="relative shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer"
+                          style={{
+                            borderRadius: '16px',
+                            border: '2px solid #CA9E76',
+                            overflow: 'hidden'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.zIndex = '20';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.zIndex = '1';
+                          }}
                         >
                           <Image
                             src={`/images/${img}`}
@@ -270,6 +310,9 @@ export default function HomePage() {
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 50vw, 25vw"
+                            style={{
+                              borderRadius: '14px'
+                            }}
                           />
                         </div>
                       );
@@ -282,17 +325,67 @@ export default function HomePage() {
             {/* Carousel Navigation */}
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg transition-all z-10"
+              style={{
+                position: 'absolute',
+                left: '-1.5rem',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                border: 'none',
+                borderRadius: '50%',
+                width: '48px',
+                height: '48px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                zIndex: 10,
+                transition: 'transform 0.2s, box-shadow 0.2s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+              }}
               aria-label="Previous"
             >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#CA9E76]" />
+              <ChevronLeft style={{ width: '24px', height: '24px', color: '#fff' }} />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 bg-white/90 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg transition-all z-10"
+              style={{
+                position: 'absolute',
+                right: '-1.5rem',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                border: 'none',
+                borderRadius: '50%',
+                width: '48px',
+                height: '48px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                zIndex: 10,
+                transition: 'transform 0.2s, box-shadow 0.2s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+                e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+              }}
               aria-label="Next"
             >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#CA9E76]" />
+              <ChevronRight style={{ width: '24px', height: '24px', color: '#fff' }} />
             </button>
 
             {/* Dots */}
@@ -308,16 +401,27 @@ export default function HomePage() {
                 />
               ))}
             </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Modal */}
-      {selectedImage !== null && (() => {
-        console.log('Modal is rendering! selectedImage:', selectedImage);
-        return (
+      {selectedImage !== null && (
         <div
-          className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 999999,
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1rem'
+          }}
           onClick={(e) => {
             console.log('Modal background clicked');
             if (e.target === e.currentTarget) {
@@ -326,48 +430,148 @@ export default function HomePage() {
           }}
         >
           <button
-            onClick={closeModal}
-            className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all"
+            onClick={(e) => {
+              e.stopPropagation();
+              closeModal();
+            }}
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+              zIndex: 1000000,
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '48px',
+              height: '48px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+            }}
             aria-label="Close"
           >
-            <X className="w-8 h-8 text-white" />
+            <X style={{ width: '28px', height: '28px', color: '#000' }} />
           </button>
 
           <button
-            onClick={(e) => { e.stopPropagation(); prevImage(); }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            style={{
+              position: 'absolute',
+              left: '1rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              zIndex: 1000000,
+              background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '56px',
+              height: '56px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+              transition: 'transform 0.2s, box-shadow 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+              e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+            }}
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-8 h-8 text-white" />
+            <ChevronLeft style={{ width: '32px', height: '32px', color: '#fff' }} />
           </button>
 
           <button
-            onClick={(e) => { e.stopPropagation(); nextImage(); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            style={{
+              position: 'absolute',
+              right: '1rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              zIndex: 1000000,
+              background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '56px',
+              height: '56px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+              transition: 'transform 0.2s, box-shadow 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
+              e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+            }}
             aria-label="Next image"
           >
-            <ChevronRight className="w-8 h-8 text-white" />
+            <ChevronRight style={{ width: '32px', height: '32px', color: '#fff' }} />
           </button>
 
           <div
-            className="relative max-w-5xl max-h-[90vh] w-full h-full"
+            style={{
+              position: 'relative',
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
+            <img
               src={`/images/${portfolioImages[selectedImage]}`}
               alt={`Portfolio piece ${selectedImage + 1}`}
-              fill
-              className="object-contain"
-              sizes="100vw"
+              style={{
+                maxWidth: '100%',
+                maxHeight: '90vh',
+                width: 'auto',
+                height: 'auto',
+                borderRadius: '16px',
+                border: '3px solid #CA9E76',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+                objectFit: 'contain'
+              }}
             />
           </div>
 
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+          <div style={{
+            position: 'absolute',
+            bottom: '0rem',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            color: 'white',
+            fontSize: '0.875rem',
+            background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+            padding: '0.4rem 1.25rem',
+            borderRadius: '9999px',
+            fontWeight: '600',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+            zIndex: 1000000
+          }}>
             {selectedImage + 1} / {portfolioImages.length}
           </div>
         </div>
-        );
-      })()}
+      )}
 
 
       {/* Pricing Section */}
