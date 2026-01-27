@@ -114,10 +114,34 @@ export default function HomePage() {
   return (
     <div className="min-h-screen relative bg-gradient-to-br from-[#FFF8F0] via-[#F5E6E6] to-[#FFD4C4] fabric-texture" lang={lang}>
       {/* Language Toggle */}
-      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
+      <div style={{
+        position: 'fixed',
+        top: '1rem',
+        right: '1rem',
+        zIndex: 50
+      }}>
         <button
           onClick={toggleLanguage}
-          className="bg-[#CA9E76] backdrop-blur-sm px-6 py-3 sm:px-5 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-semibold text-base sm:text-sm text-white hover:bg-[#BA8E66]"
+          style={{
+            background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+            border: 'none',
+            borderRadius: '9999px',
+            padding: '0.4rem 0.9rem',
+            fontSize: '0.875rem',
+            fontWeight: '600',
+            color: 'white',
+            cursor: 'pointer',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            transition: 'transform 0.2s, box-shadow 0.2s'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'scale(1.05)';
+            e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'scale(1)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+          }}
         >
           {lang === 'en' ? 'RU' : 'EN'}
         </button>
@@ -268,7 +292,8 @@ export default function HomePage() {
               <div
                 style={{
                   position: 'relative',
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  touchAction: 'pan-y'
                 }}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
