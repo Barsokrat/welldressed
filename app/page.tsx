@@ -242,20 +242,22 @@ export default function HomePage() {
                     {portfolioImages.slice(slideIdx * 4, slideIdx * 4 + 4).map((img, idx) => {
                       const actualIdx = slideIdx * 4 + idx;
                       return (
-                        <button
+                        <div
                           key={actualIdx}
-                          onClick={() => openModal(actualIdx)}
-                          type="button"
-                          className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer bg-transparent border-0 p-0 w-full"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openModal(actualIdx);
+                          }}
+                          className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 aspect-square cursor-pointer"
                         >
                           <Image
                             src={`/images/${img}`}
                             alt={`Portfolio piece ${actualIdx + 1}`}
                             fill
-                            className="object-cover pointer-events-none"
+                            className="object-cover"
                             sizes="(max-width: 768px) 50vw, 25vw"
                           />
-                        </button>
+                        </div>
                       );
                     })}
                   </div>
