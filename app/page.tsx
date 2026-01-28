@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Scissors, Heart, Award, Mail, Phone, MessageCircle, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { getTranslation, type Language } from './i18n'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const portfolioImages = [
   '1.JPG',
@@ -828,6 +829,34 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* Blog Section */}
+      <section id="blog" className="px-8 sm:px-12">
+        <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
+          <div className="text-center mb-12">
+            <h2 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(1.75rem, 4vw, 2.25rem)'}}>
+              {lang === 'en' ? 'Blog' : 'Блог'}
+            </h2>
+            <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-4"></div>
+            <p className="text-xl text-[#364147]">
+              {lang === 'en'
+                ? 'Fashion trends and tailoring insights in Abu Dhabi'
+                : 'Модные тенденции и советы по пошиву в Абу-Даби'
+              }
+            </p>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#CA9E76] to-[#BA8E66] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <span>{lang === 'en' ? 'Read Our Blog' : 'Читать блог'}</span>
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section id="contact" className="px-8 sm:px-12 mb-32">

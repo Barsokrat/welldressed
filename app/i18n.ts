@@ -14,6 +14,7 @@ export const translations = {
       services: 'Services',
       pricing: 'Pricing',
       training: 'Training',
+      blog: 'Blog',
       contact: 'Contact',
     },
     about: {
@@ -116,6 +117,7 @@ export const translations = {
       services: 'Услуги',
       pricing: 'Прайс',
       training: 'Обучение',
+      blog: 'Блог',
       contact: 'Контакты',
     },
     about: {

@@ -177,3 +177,13 @@ button:focus {
     right: -1.5rem !important;
   }
 }
+
+/* Blog post title size override */
+.blog-post-title {
+  font-size: 1.8rem !important;
+}
+
+:lang(ru) .blog-post-title,
+[lang="ru"] .blog-post-title {
+  font-size: 1.9rem !important;
+}
