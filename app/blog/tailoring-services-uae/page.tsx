@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getTranslation, type Language } from '../../i18n'
@@ -8,13 +8,24 @@ import { getTranslation, type Language } from '../../i18n'
 export default function BlogPost() {
   const [lang, setLang] = useState<Language>('en')
 
+  useEffect(() => {
+    const savedLang = localStorage.getItem('language') as Language
+    if (savedLang) {
+      setLang(savedLang)
+    }
+  }, [])
+
   const toggleLanguage = () => {
-    setLang(prev => prev === 'en' ? 'ru' : 'en')
+    setLang(prev => {
+      const newLang = prev === 'en' ? 'ru' : 'en'
+      localStorage.setItem('language', newLang)
+      return newLang
+    })
   }
 
   const contentRu = {
     title: 'Услуги швеи в ОАЭ: от повседневной одежды до вечерних нарядов',
-    date: '26 января 2025',
+    date: '26 января 2026',
     content: `
       <p>Профессиональная <strong>швея в Абу-Даби</strong> предлагает широкий спектр услуг — от создания повседневных образов до роскошных вечерних нарядов. В этой статье мы расскажем о всех возможностях, которые открывает <strong>индивидуальный пошив одежды в ОАЭ</strong>.</p>
 
@@ -154,7 +165,7 @@ export default function BlogPost() {
 
   const contentEn = {
     title: 'Tailoring Services in UAE: From Casual Wear to Evening Gowns',
-    date: 'January 26, 2025',
+    date: 'January 26, 2026',
     content: `
       <p>A professional <strong>seamstress in Abu Dhabi</strong> offers a wide range of services — from creating casual looks to luxurious evening attire. In this article, we'll tell you about all the possibilities that <strong>bespoke clothing tailoring in UAE</strong> opens up.</p>
 
@@ -330,15 +341,42 @@ export default function BlogPost() {
         </button>
       </div>
 
-      <article className="px-8 sm:px-12 pt-24 pb-32">
+      {/* Back Button */}
+      <Link
+        href="/blog"
+        className="inline-flex items-center gap-2 transition-all duration-300"
+        style={{
+          position: 'fixed',
+          top: '1rem',
+          left: '1rem',
+          zIndex: 50,
+          background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+          color: 'white',
+          padding: '0.4rem 0.9rem',
+          borderRadius: '9999px',
+          fontSize: '0.875rem',
+          fontWeight: '600',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+          textDecoration: 'none'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'scale(1.05)';
+          e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        }}
+      >
+        <span>←</span>
+        <span>{lang === 'en' ? 'Back to Blog' : 'Вернуться к блогу'}</span>
+      </Link>
+
+      <article className="px-8 sm:px-12 pt-16 pb-32">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
-          <Link href="/blog" className="inline-flex items-center gap-2 text-[#CA9E76] hover:text-[#BA8E66] mb-8 transition-colors">
-            <span>←</span>
-            <span>{lang === 'en' ? 'Back to Blog' : 'Вернуться к блогу'}</span>
-          </Link>
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="aspect-[16/9] relative">
+            <div className="aspect-[16/9] relative overflow-hidden" style={{borderRadius: '1.5rem 1.5rem 0 0'}}>
               <Image
                 src="/images/3.JPG"
                 alt={content.title}

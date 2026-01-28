@@ -35,6 +35,13 @@ export default function HomePage() {
   const totalSlides = Math.ceil(portfolioImages.length / itemsPerSlide)
 
   useEffect(() => {
+    const savedLang = localStorage.getItem('language') as Language
+    if (savedLang) {
+      setLang(savedLang)
+    }
+  }, [])
+
+  useEffect(() => {
     if (selectedImage !== null) {
       document.body.style.overflow = 'hidden'
 
@@ -58,7 +65,11 @@ export default function HomePage() {
   console.log('Render - selectedImage:', selectedImage)
 
   const toggleLanguage = () => {
-    setLang(prev => prev === 'en' ? 'ru' : 'en')
+    setLang(prev => {
+      const newLang = prev === 'en' ? 'ru' : 'en'
+      localStorage.setItem('language', newLang)
+      return newLang
+    })
   }
 
   const openModal = (index: number) => {
@@ -849,7 +860,25 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#CA9E76] to-[#BA8E66] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 transition-all duration-300"
+              style={{
+                background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                color: 'white',
+                padding: '1rem 2rem',
+                borderRadius: '9999px',
+                fontSize: '1rem',
+                fontWeight: '600',
+                boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
+                textDecoration: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)';
+                e.currentTarget.style.boxShadow = '0 15px 35px rgba(0,0,0,0.25)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+              }}
             >
               <span>{lang === 'en' ? 'Read Our Blog' : 'Читать блог'}</span>
               <span>→</span>

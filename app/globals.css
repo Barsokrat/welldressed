@@ -45,9 +45,9 @@ h3 {
   font-size: 1.75rem !important;
 }
 
-/* Увеличение базового размера текста для русского (кроме hero section) */
-:lang(ru) p:not(.hero-text),
-[lang="ru"] p:not(.hero-text),
+/* Увеличение базового размера текста для русского (кроме hero section и blog) */
+:lang(ru) p:not(.hero-text):not(.blog-post-excerpt),
+[lang="ru"] p:not(.hero-text):not(.blog-post-excerpt),
 :lang(ru) span:not(.hero-text),
 [lang="ru"] span:not(.hero-text),
 :lang(ru) li,
@@ -180,10 +180,20 @@ button:focus {
 
 /* Blog post title size override */
 .blog-post-title {
-  font-size: 1.8rem !important;
+  font-size: 1.7rem !important;
 }
 
 :lang(ru) .blog-post-title,
 [lang="ru"] .blog-post-title {
-  font-size: 1.9rem !important;
+  font-size: 1.7rem !important;
+}
+
+/* Blog post excerpt size override */
+.blog-post-excerpt {
+  font-size: 1rem !important;
+}
+
+:lang(ru) .blog-post-excerpt,
+[lang="ru"] .blog-post-excerpt {
+  font-size: 1rem !important;
 }

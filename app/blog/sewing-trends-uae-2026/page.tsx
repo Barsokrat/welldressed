@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getTranslation, type Language } from '../../i18n'
@@ -8,21 +8,32 @@ import { getTranslation, type Language } from '../../i18n'
 export default function BlogPost() {
   const [lang, setLang] = useState<Language>('en')
 
+  useEffect(() => {
+    const savedLang = localStorage.getItem('language') as Language
+    if (savedLang) {
+      setLang(savedLang)
+    }
+  }, [])
+
   const toggleLanguage = () => {
-    setLang(prev => prev === 'en' ? 'ru' : 'en')
+    setLang(prev => {
+      const newLang = prev === 'en' ? 'ru' : 'en'
+      localStorage.setItem('language', newLang)
+      return newLang
+    })
   }
 
   const contentRu = {
-    title: 'Швейные тенденции в ОАЭ 2025: что носят в Абу-Даби',
-    date: '28 января 2025',
+    title: 'Швейные тенденции в ОАЭ 2026: что носят в Абу-Даби',
+    date: '28 января 2026',
     content: `
-      <p>Объединенные Арабские Эмираты и особенно Абу-Даби давно зарекомендовали себя как центр моды и стиля на Ближнем Востоке. В 2025 году <strong>пошив одежды на заказ</strong> в ОАЭ переживает настоящий бум, и всё больше жителей столицы выбирают индивидуальный подход к созданию гардероба.</p>
+      <p>Объединенные Арабские Эмираты и особенно Абу-Даби давно зарекомендовали себя как центр моды и стиля на Ближнем Востоке. В 2026 году <strong>пошив одежды на заказ</strong> в ОАЭ переживает настоящий бум, и всё больше жителей столицы выбирают индивидуальный подход к созданию гардероба.</p>
 
       <h2>Почему швея в Абу-Даби — это не просто тренд</h2>
 
       <p>Современная <strong>швея в Абу-Даби</strong> — это высококвалифицированный специалист, который сочетает традиционные техники с инновационными подходами. <strong>Индивидуальный пошив одежды в ОАЭ</strong> позволяет создавать уникальные наряды, которые идеально сидят по фигуре и отражают личность клиента.</p>
 
-      <h2>Главные тренды пошива одежды в ОАЭ в 2025 году</h2>
+      <h2>Главные тренды пошива одежды в ОАЭ в 2026 году</h2>
 
       <h3>1. Устойчивая мода и переработка</h3>
       <p>Жители Абу-Даби всё чаще обращаются к швеям для переделки и обновления существующей одежды. <strong>Пошив одежды</strong> с использованием экологичных материалов и переработка винтажных вещей становятся особенно популярными.</p>
@@ -64,16 +75,16 @@ export default function BlogPost() {
   }
 
   const contentEn = {
-    title: 'Sewing Trends in UAE 2025: What\'s Worn in Abu Dhabi',
-    date: 'January 28, 2025',
+    title: 'Sewing Trends in UAE 2026: What\'s Worn in Abu Dhabi',
+    date: 'January 28, 2026',
     content: `
-      <p>The United Arab Emirates, and especially Abu Dhabi, have long established themselves as a center of fashion and style in the Middle East. In 2025, <strong>custom clothing tailoring</strong> in the UAE is experiencing a real boom, with more and more capital residents choosing an individual approach to creating their wardrobe.</p>
+      <p>The United Arab Emirates, and especially Abu Dhabi, have long established themselves as a center of fashion and style in the Middle East. In 2026, <strong>custom clothing tailoring</strong> in the UAE is experiencing a real boom, with more and more capital residents choosing an individual approach to creating their wardrobe.</p>
 
       <h2>Why a seamstress in Abu Dhabi is more than just a trend</h2>
 
       <p>A modern <strong>seamstress in Abu Dhabi</strong> is a highly qualified specialist who combines traditional techniques with innovative approaches. <strong>Bespoke clothing tailoring in UAE</strong> allows creating unique outfits that fit perfectly and reflect the client's personality.</p>
 
-      <h2>Main clothing tailoring trends in UAE in 2025</h2>
+      <h2>Main clothing tailoring trends in UAE in 2026</h2>
 
       <h3>1. Sustainable fashion and upcycling</h3>
       <p>Abu Dhabi residents increasingly turn to seamstresses for alterations and updates of existing clothing. <strong>Clothing tailoring</strong> using eco-friendly materials and upcycling vintage items are becoming especially popular.</p>
@@ -152,15 +163,42 @@ export default function BlogPost() {
         </button>
       </div>
 
-      <article className="px-8 sm:px-12 pt-24 pb-32">
+      {/* Back Button */}
+      <Link
+        href="/blog"
+        className="inline-flex items-center gap-2 transition-all duration-300"
+        style={{
+          position: 'fixed',
+          top: '1rem',
+          left: '1rem',
+          zIndex: 50,
+          background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+          color: 'white',
+          padding: '0.4rem 0.9rem',
+          borderRadius: '9999px',
+          fontSize: '0.875rem',
+          fontWeight: '600',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+          textDecoration: 'none'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'scale(1.05)';
+          e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        }}
+      >
+        <span>←</span>
+        <span>{lang === 'en' ? 'Back to Blog' : 'Вернуться к блогу'}</span>
+      </Link>
+
+      <article className="px-8 sm:px-12 pt-16 pb-32">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
-          <Link href="/blog" className="inline-flex items-center gap-2 text-[#CA9E76] hover:text-[#BA8E66] mb-8 transition-colors">
-            <span>←</span>
-            <span>{lang === 'en' ? 'Back to Blog' : 'Вернуться к блогу'}</span>
-          </Link>
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="aspect-[16/9] relative">
+            <div className="aspect-[16/9] relative overflow-hidden" style={{borderRadius: '1.5rem 1.5rem 0 0'}}>
               <Image
                 src="/images/1.JPG"
                 alt={content.title}

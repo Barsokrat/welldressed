@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getTranslation, type Language } from '../../i18n'
@@ -8,13 +8,24 @@ import { getTranslation, type Language } from '../../i18n'
 export default function BlogPost() {
   const [lang, setLang] = useState<Language>('en')
 
+  useEffect(() => {
+    const savedLang = localStorage.getItem('language') as Language
+    if (savedLang) {
+      setLang(savedLang)
+    }
+  }, [])
+
   const toggleLanguage = () => {
-    setLang(prev => prev === 'en' ? 'ru' : 'en')
+    setLang(prev => {
+      const newLang = prev === 'en' ? 'ru' : 'en'
+      localStorage.setItem('language', newLang)
+      return newLang
+    })
   }
 
   const contentRu = {
     title: 'Одежда на заказ в Абу-Даби: преимущества индивидуального пошива',
-    date: '27 января 2025',
+    date: '27 января 2026',
     content: `
       <p>В эпоху массового производства <strong>одежда на заказ в ОАЭ</strong> становится символом истинного стиля и индивидуальности. Всё больше жителей столицы обращаются к услугам профессиональных мастеров, понимая ценность индивидуального подхода.</p>
 
@@ -86,7 +97,7 @@ export default function BlogPost() {
 
   const contentEn = {
     title: 'Custom Clothing in Abu Dhabi: Benefits of Bespoke Tailoring',
-    date: 'January 27, 2025',
+    date: 'January 27, 2026',
     content: `
       <p>In the era of mass production, <strong>custom clothing in UAE</strong> is becoming a symbol of true style and individuality. More and more capital residents are turning to professional craftsmen, understanding the value of an individual approach.</p>
 
@@ -194,15 +205,42 @@ export default function BlogPost() {
         </button>
       </div>
 
-      <article className="px-8 sm:px-12 pt-24 pb-32">
+      {/* Back Button */}
+      <Link
+        href="/blog"
+        className="inline-flex items-center gap-2 transition-all duration-300"
+        style={{
+          position: 'fixed',
+          top: '1rem',
+          left: '1rem',
+          zIndex: 50,
+          background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+          color: 'white',
+          padding: '0.4rem 0.9rem',
+          borderRadius: '9999px',
+          fontSize: '0.875rem',
+          fontWeight: '600',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+          textDecoration: 'none'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'scale(1.05)';
+          e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        }}
+      >
+        <span>←</span>
+        <span>{lang === 'en' ? 'Back to Blog' : 'Вернуться к блогу'}</span>
+      </Link>
+
+      <article className="px-8 sm:px-12 pt-16 pb-32">
         <div className="w-full mx-auto" style={{maxWidth: '800px'}}>
-          <Link href="/blog" className="inline-flex items-center gap-2 text-[#CA9E76] hover:text-[#BA8E66] mb-8 transition-colors">
-            <span>←</span>
-            <span>{lang === 'en' ? 'Back to Blog' : 'Вернуться к блогу'}</span>
-          </Link>
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="aspect-[16/9] relative">
+            <div className="aspect-[16/9] relative overflow-hidden" style={{borderRadius: '1.5rem 1.5rem 0 0'}}>
               <Image
                 src="/images/2.jpg"
                 alt={content.title}

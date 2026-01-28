@@ -1,17 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getTranslation, type Language } from '../i18n'
 
 const blogPosts = [
   {
-    slug: 'sewing-trends-uae-2025',
-    titleRu: 'Швейные тенденции в ОАЭ 2025: что носят в Абу-Даби',
-    titleEn: 'Sewing Trends in UAE 2025: What\'s Worn in Abu Dhabi',
+    slug: 'sewing-trends-uae-2026',
+    titleRu: 'Швейные тенденции в ОАЭ 2026: что носят в Абу-Даби',
+    titleEn: 'Sewing Trends in UAE 2026: What\'s Worn in Abu Dhabi',
     excerptRu: 'Узнайте о самых актуальных швейных тенденциях в ОАЭ и Абу-Даби. Пошив одежды на заказ становится всё популярнее среди жителей столицы.',
     excerptEn: 'Discover the most relevant sewing trends in UAE and Abu Dhabi. Custom tailoring is becoming increasingly popular among capital residents.',
-    date: '2025-01-28',
+    date: '2026-01-28',
     image: '/images/1.JPG'
   },
   {
@@ -20,7 +20,7 @@ const blogPosts = [
     titleEn: 'Custom Clothing in Abu Dhabi: Benefits of Bespoke Tailoring',
     excerptRu: 'Почему швея в Абу-Даби — это лучший выбор для создания уникального гардероба. Индивидуальный пошив одежды в ОАЭ.',
     excerptEn: 'Why a seamstress in Abu Dhabi is the best choice for creating a unique wardrobe. Bespoke clothing tailoring in UAE.',
-    date: '2025-01-27',
+    date: '2026-01-27',
     image: '/images/2.jpg'
   },
   {
@@ -29,7 +29,7 @@ const blogPosts = [
     titleEn: 'Tailoring Services in UAE: From Casual Wear to Evening Gowns',
     excerptRu: 'Профессиональный пошив одежды в Абу-Даби. Услуги швеи высокого класса: платья, юбки, блузки на заказ в ОАЭ.',
     excerptEn: 'Professional clothing tailoring in Abu Dhabi. High-class seamstress services: dresses, skirts, blouses made to order in UAE.',
-    date: '2025-01-26',
+    date: '2026-01-26',
     image: '/images/3.JPG'
   }
 ]
@@ -38,8 +38,20 @@ export default function BlogPage() {
   const [lang, setLang] = useState<Language>('en')
   const t = getTranslation(lang)
 
+  // Load language from localStorage on mount
+  useEffect(() => {
+    const savedLang = localStorage.getItem('language') as Language
+    if (savedLang) {
+      setLang(savedLang)
+    }
+  }, [])
+
   const toggleLanguage = () => {
-    setLang(prev => prev === 'en' ? 'ru' : 'en')
+    setLang(prev => {
+      const newLang = prev === 'en' ? 'ru' : 'en'
+      localStorage.setItem('language', newLang)
+      return newLang
+    })
   }
 
   return (
@@ -78,18 +90,44 @@ export default function BlogPage() {
         </button>
       </div>
 
-      {/* Header */}
-      <div className="px-8 sm:px-12 pt-24 pb-12">
-        <div className="w-full mx-auto" style={{maxWidth: '900px'}}>
-          <Link href="/" className="inline-flex items-center gap-2 text-[#CA9E76] hover:text-[#BA8E66] mb-8 transition-colors">
-            <span>←</span>
-            <span>{lang === 'en' ? 'Back to Home' : 'Вернуться на главную'}</span>
-          </Link>
+      {/* Back Button */}
+      <Link
+        href="/"
+        className="inline-flex items-center gap-2 transition-all duration-300"
+        style={{
+          position: 'fixed',
+          top: '1rem',
+          left: '1rem',
+          zIndex: 50,
+          background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+          color: 'white',
+          padding: '0.4rem 0.9rem',
+          borderRadius: '9999px',
+          fontSize: '0.875rem',
+          fontWeight: '600',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+          textDecoration: 'none'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'scale(1.05)';
+          e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        }}
+      >
+        <span>←</span>
+        <span>{lang === 'en' ? 'Back to Home' : 'Вернуться на главную'}</span>
+      </Link>
 
+      {/* Header */}
+      <section className="relative min-h-[40vh] flex items-center justify-center px-8 sm:px-12">
+        <div className="w-full text-center" style={{maxWidth: '900px'}}>
           <h1 className="font-bold text-[#CA9E76] mb-4" style={{fontSize: 'clamp(2.5rem, 8vw, 4rem)'}}>
             {lang === 'en' ? 'Blog' : 'Блог'}
           </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-[#D4AF37] to-transparent mb-6"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[#D4AF37] to-transparent mb-6 mx-auto"></div>
           <p className="text-xl text-[#364147]">
             {lang === 'en'
               ? 'Insights about tailoring, fashion trends, and bespoke clothing in Abu Dhabi and UAE'
@@ -97,7 +135,7 @@ export default function BlogPage() {
             }
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Blog Posts */}
       <section className="px-8 sm:px-12 pb-32">
@@ -117,21 +155,21 @@ export default function BlogPage() {
                   style={{borderRadius: '14px'}}
                 />
               </div>
-              <div className="p-4 flex flex-col flex-1">
-                <p className="text-xs text-[#CA9E76] mb-2">
+              <div style={{padding: '4px 4px 12px 4px'}} className="flex flex-col flex-1">
+                <p style={{marginBottom: '6px'}} className="text-xs text-[#CA9E76]">
                   {new Date(post.date).toLocaleDateString(lang === 'en' ? 'en-US' : 'ru-RU', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                   })}
                 </p>
-                <h2 className="blog-post-title font-bold text-[#CA9E76] mb-2 leading-snug">
+                <h2 style={{margin: '0 0 4px 0', lineHeight: '1.3'}} className="blog-post-title font-bold text-[#CA9E76]">
                   {lang === 'en' ? post.titleEn : post.titleRu}
                 </h2>
-                <p className="text-xs text-[#364147] leading-relaxed line-clamp-3 flex-1">
+                <p style={{marginBottom: '8px', lineHeight: '1.4'}} className="blog-post-excerpt text-[#364147] line-clamp-2 flex-1">
                   {lang === 'en' ? post.excerptEn : post.excerptRu}
                 </p>
-                <div className="mt-3 text-xs text-[#CA9E76] font-semibold">
+                <div className="text-xs text-[#CA9E76] font-semibold">
                   {lang === 'en' ? 'Read more →' : 'Читать далее →'}
                 </div>
               </div>
