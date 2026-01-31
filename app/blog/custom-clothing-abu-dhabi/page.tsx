@@ -404,10 +404,10 @@ export default function BlogPost() {
                   </Link>
                   <Link href="/blog/womens-tailor-abu-dhabi" style={{ display: 'block', padding: '1rem', borderRadius: '12px', background: '#FFF8F0', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)'; }}>
                     <p style={{ color: '#CA9E76', fontWeight: '600', marginBottom: '0.25rem' }}>
-                      {lang === 'en' ? 'Women\'s Tailor Abu Dhabi: Finding the Perfect Fit' : 'Женский портной в Абу-Даби: как найти идеальную посадку'}
+                      {lang === 'en' ? 'Women\'s Tailor Abu Dhabi: Finding the Perfect Fit' : 'Мастер по женской одежде в Абу-Даби: как найти идеальную посадку'}
                     </p>
                     <p style={{ color: '#364147', fontSize: '0.875rem', margin: 0 }}>
-                      {lang === 'en' ? 'How to choose a women\'s tailor' : 'Как выбрать женского портного'}
+                      {lang === 'en' ? 'How to choose a women\'s tailor' : 'Как выбрать мастера по женской одежде'}
                     </p>
                   </Link>
                   <Link href="/blog/tailoring-services-uae" style={{ display: 'block', padding: '1rem', borderRadius: '12px', background: '#FFF8F0', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)'; }}>

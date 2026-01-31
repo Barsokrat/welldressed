@@ -16,9 +16,9 @@ const blogPosts = [
   },
   {
     slug: 'womens-tailor-abu-dhabi',
-    titleRu: 'Женский портной в Абу-Даби: как найти идеальную посадку',
+    titleRu: 'Мастер по женской одежде в Абу-Даби: как найти идеальную посадку',
     titleEn: 'Women\'s Tailor Abu Dhabi: Finding the Perfect Fit',
-    excerptRu: 'Как выбрать женского портного в Абу-Даби. Всё о пошиве женской одежды на заказ - от консультации до примерок.',
+    excerptRu: 'Как выбрать мастера по женской одежде в Абу-Даби. Всё о пошиве женской одежды на заказ - от консультации до примерок.',
     excerptEn: 'How to choose a women\'s tailor in Abu Dhabi. Everything about custom ladies tailoring - from consultation to fittings.',
     date: '2026-01-30',
     image: '/images/5.JPG'

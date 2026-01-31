@@ -47,7 +47,7 @@ export default function BlogPost() {
       </ul>
 
       <h4>Идеальная посадка для вашей фигуры</h4>
-      <p>Каждая женщина уникальна, и <strong>женский портной</strong> понимает это лучше всех. Индивидуальный пошив решает проблемы, с которыми сталкиваются многие женщины при покупке готовой одежды.</p>
+      <p>Каждая женщина уникальна, и <strong>мастер по женской одежде</strong> понимает это лучше всех. Индивидуальный пошив решает проблемы, с которыми сталкиваются многие женщины при покупке готовой одежды.</p>
 
       <h2>Что предлагает портной для женщин в Абу-Даби</h2>
 
@@ -72,7 +72,7 @@ export default function BlogPost() {
       </ul>
 
       <h4>Свадебные платья</h4>
-      <p>Создание свадебного платья - особая специализация. Опытный <strong>женский портной</strong> воплотит вашу мечту о платье принцессы в реальность.</p>
+      <p>Создание свадебного платья - особая специализация. Опытный <strong>мастер по женской одежде</strong> воплотит вашу мечту о платье принцессы в реальность.</p>
 
       <h3>Женские костюмы и деловая одежда</h3>
 
@@ -227,7 +227,7 @@ export default function BlogPost() {
       <p><strong>Портной в Абу-Даби для женщин</strong> поможет создать набор взаимозаменяемых вещей, которые легко комбинируются между собой.</p>
 
       <h3>Инвестируйте в базовые вещи</h3>
-      <p>Качественные базовые вещи от <strong>женского портного</strong> прослужат годами:</p>
+      <p>Качественные базовые вещи от <strong>мастера по женской одежде</strong> прослужат годами:</p>
       <ul>
         <li>Идеальная белая блузка</li>
         <li>Классические черные брюки</li>
@@ -247,7 +247,7 @@ export default function BlogPost() {
       <p>Носите такое же белье, какое планируете носить с готовым изделием.</p>
 
       <h3>Доверяйте профессионалу</h3>
-      <p>Опытный <strong>женский портной в Абу-Даби</strong> знает, что подойдет вашей фигуре лучше всего.</p>
+      <p>Опытный <strong>мастер по женской одежде в Абу-Даби</strong> знает, что подойдет вашей фигуре лучше всего.</p>
 
       <h3>Планируйте заранее</h3>
       <p>Особенно для особых случаев - начните процесс за 2-3 месяца.</p>
@@ -785,7 +785,7 @@ export default function BlogPost() {
                       {lang === 'en' ? 'Women\'s Tailor Abu Dhabi: Finding the Perfect Fit' : 'Женский портной в Абу-Даби: как найти идеальную посадку'}
                     </p>
                     <p style={{ color: '#364147', fontSize: '0.875rem', margin: 0 }}>
-                      {lang === 'en' ? 'How to choose a women\'s tailor in Abu Dhabi' : 'Как выбрать женского портного'}
+                      {lang === 'en' ? 'How to choose a women\'s tailor in Abu Dhabi' : 'Как выбрать мастера по женской одежде'}
                     </p>
                   </Link>
                   <Link href="/blog/custom-clothing-abu-dhabi" style={{ display: 'block', padding: '1rem', borderRadius: '12px', background: '#FFF8F0', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)'; }}>
