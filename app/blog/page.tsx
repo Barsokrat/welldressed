@@ -6,6 +6,33 @@ import { getTranslation, type Language } from '../i18n'
 
 const blogPosts = [
   {
+    slug: 'ladies-tailoring-abu-dhabi',
+    titleRu: 'Пошив женской одежды в Абу-Даби: искусство создавать красоту',
+    titleEn: 'Ladies Tailoring in Abu Dhabi: The Art of Creating Beauty',
+    excerptRu: 'Профессиональный пошив женской одежды в Абу-Даби. Портниха для женщин создаёт уникальные наряды идеальной посадки.',
+    excerptEn: 'Professional ladies tailoring in Abu Dhabi. Women\'s tailor creates unique outfits with perfect fit.',
+    date: '2026-01-31',
+    image: '/images/4.JPG'
+  },
+  {
+    slug: 'womens-tailor-abu-dhabi',
+    titleRu: 'Женский портной в Абу-Даби: как найти идеальную посадку',
+    titleEn: 'Women\'s Tailor Abu Dhabi: Finding the Perfect Fit',
+    excerptRu: 'Как выбрать женского портного в Абу-Даби. Всё о пошиве женской одежды на заказ - от консультации до примерок.',
+    excerptEn: 'How to choose a women\'s tailor in Abu Dhabi. Everything about custom ladies tailoring - from consultation to fittings.',
+    date: '2026-01-30',
+    image: '/images/5.JPG'
+  },
+  {
+    slug: 'tailor-abu-dhabi-ladies',
+    titleRu: 'Портной в Абу-Даби для женщин: индивидуальная женская мода',
+    titleEn: 'Tailor in Abu Dhabi for Ladies: Custom Women\'s Fashion',
+    excerptRu: 'Индивидуальная женская мода в Абу-Даби. Портной для женщин создаёт эксклюзивную одежду для любого случая.',
+    excerptEn: 'Custom women\'s fashion in Abu Dhabi. Tailor for ladies creates exclusive clothing for any occasion.',
+    date: '2026-01-29',
+    image: '/images/6.JPG'
+  },
+  {
     slug: 'sewing-trends-uae-2026',
     titleRu: 'Швейные тенденции в ОАЭ 2026: что носят в Абу-Даби',
     titleEn: 'Sewing Trends in UAE 2026: What\'s Worn in Abu Dhabi',

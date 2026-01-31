@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Instagram, Mail, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react'
 import { getTranslation, type Language } from '../../i18n'
 
 export default function BlogPost() {
@@ -222,6 +223,181 @@ export default function BlogPost() {
                 }}
                 dangerouslySetInnerHTML={{ __html: content.content }}
               />
+
+              {/* Social Media Links */}
+              <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #F5E6E6' }}>
+                <p style={{ fontSize: '0.875rem', color: '#CA9E76', marginBottom: '1rem', fontWeight: '600' }}>
+                  {lang === 'en' ? 'Follow us and get in touch:' : 'Подпишитесь и свяжитесь с нами:'}
+                </p>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                  <a
+                    href="https://instagram.com/yanboroboro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      width: '48px',
+                      height: '48px',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      transition: 'opacity 0.2s, box-shadow 0.2s',
+                      boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                      opacity: 1
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = '0.85';
+                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = '1';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                    }}
+                  >
+                    <Instagram size={24} />
+                  </a>
+                  <a
+                    href="https://wa.me/971526232050"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      width: '48px',
+                      height: '48px',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      transition: 'opacity 0.2s, box-shadow 0.2s',
+                      boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                      opacity: 1
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = '0.85';
+                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = '1';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                    }}
+                  >
+                    <MessageCircle size={24} />
+                  </a>
+                  <a
+                    href="mailto:yana@welldressed.ae"
+                    style={{
+                      width: '48px',
+                      height: '48px',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      transition: 'opacity 0.2s, box-shadow 0.2s',
+                      boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                      opacity: 1
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = '0.85';
+                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = '1';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                    }}
+                  >
+                    <Mail size={24} />
+                  </a>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+                <a
+                  href="https://wa.me/971526232050?text=Hello!%20I%27d%20like%20to%20order%20custom%20tailoring"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    background: 'linear-gradient(to right, #CA9E76, #BA8E66)',
+                    color: 'white',
+                    padding: '1rem 2.5rem',
+                    borderRadius: '9999px',
+                    fontSize: '1.125rem',
+                    fontWeight: '600',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                    textDecoration: 'none',
+                    transition: 'transform 0.2s, box-shadow 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'scale(1.05)';
+                    e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'scale(1)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+                  }}
+                >
+                  {lang === 'en' ? 'Order Custom Tailoring' : 'Заказать пошив'}
+                </a>
+              </div>
+
+              {/* Related Articles */}
+              <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #F5E6E6' }}>
+                <h3 style={{ color: '#CA9E76', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem' }}>
+                  {lang === 'en' ? 'Read Also' : 'Читайте также'}
+                </h3>
+                <div style={{ display: 'grid', gap: '1rem' }}>
+                  <Link href="/blog/ladies-tailoring-abu-dhabi" style={{ display: 'block', padding: '1rem', borderRadius: '12px', background: '#FFF8F0', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)'; }}>
+                    <p style={{ color: '#CA9E76', fontWeight: '600', marginBottom: '0.25rem' }}>
+                      {lang === 'en' ? 'Ladies Tailoring in Abu Dhabi: The Art of Creating Beauty' : 'Пошив женской одежды в Абу-Даби: искусство создавать красоту'}
+                    </p>
+                    <p style={{ color: '#364147', fontSize: '0.875rem', margin: 0 }}>
+                      {lang === 'en' ? 'Professional ladies tailoring' : 'Профессиональный пошив женской одежды'}
+                    </p>
+                  </Link>
+                  <Link href="/blog/custom-clothing-abu-dhabi" style={{ display: 'block', padding: '1rem', borderRadius: '12px', background: '#FFF8F0', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)'; }}>
+                    <p style={{ color: '#CA9E76', fontWeight: '600', marginBottom: '0.25rem' }}>
+                      {lang === 'en' ? 'Custom Clothing in Abu Dhabi: Benefits of Bespoke Tailoring' : 'Одежда на заказ в Абу-Даби: плюсы пошива'}
+                    </p>
+                    <p style={{ color: '#364147', fontSize: '0.875rem', margin: 0 }}>
+                      {lang === 'en' ? 'Why a seamstress in Abu Dhabi is the best choice' : 'Почему швея в Абу-Даби - это лучший выбор'}
+                    </p>
+                  </Link>
+                  <Link href="/blog/tailoring-services-uae" style={{ display: 'block', padding: '1rem', borderRadius: '12px', background: '#FFF8F0', textDecoration: 'none', transition: 'transform 0.2s, box-shadow 0.2s', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(8px)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)'; }}>
+                    <p style={{ color: '#CA9E76', fontWeight: '600', marginBottom: '0.25rem' }}>
+                      {lang === 'en' ? 'Tailoring Services in UAE: From Casual Wear to Evening Gowns' : 'Услуги швеи в ОАЭ: от повседневной одежды до вечерних нарядов'}
+                    </p>
+                    <p style={{ color: '#364147', fontSize: '0.875rem', margin: 0 }}>
+                      {lang === 'en' ? 'Professional clothing tailoring in Abu Dhabi' : 'Профессиональный пошив одежды в Абу-Даби'}
+                    </p>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Navigation to Next/Prev Posts */}
+              <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #F5E6E6', display: 'flex', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+                <div style={{ flex: '1', minWidth: '120px' }}>
+                  <Link href="/blog/tailor-abu-dhabi-ladies" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#CA9E76', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', transition: 'transform 0.2s' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; }}>
+                    <ChevronLeft size={20} />
+                    {lang === 'en' ? 'Previous Post' : 'Предыдущая статья'}
+                  </Link>
+                </div>
+                <Link href="/blog" style={{ color: '#CA9E76', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', flex: '0 0 auto' }}>
+                  {lang === 'en' ? 'All Posts' : 'Все статьи'}
+                </Link>
+                <div style={{ flex: '1', minWidth: '120px', display: 'flex', justifyContent: 'flex-end' }}>
+                  <Link href="/blog/custom-clothing-abu-dhabi" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#CA9E76', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '600', transition: 'transform 0.2s' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; }}>
+                    {lang === 'en' ? 'Next Post' : 'Следующая статья'}
+                    <ChevronRight size={20} />
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -252,6 +428,14 @@ export default function BlogPost() {
         }
         .prose li {
           margin-bottom: 0.5rem;
+        }
+        .prose a {
+          color: #CA9E76;
+          text-decoration: underline;
+          transition: opacity 0.2s;
+        }
+        .prose a:hover {
+          opacity: 0.8;
         }
         .prose strong {
           color: #CA9E76;
