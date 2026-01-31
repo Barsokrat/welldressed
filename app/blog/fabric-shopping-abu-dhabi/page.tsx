@@ -469,7 +469,7 @@ export default function BlogPost() {
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="aspect-[16/9] relative overflow-hidden" style={{borderRadius: '1.5rem 1.5rem 0 0'}}>
               <Image
-                src="/images/1.JPG"
+                src="/images/blog/fabric-shopping.jpeg"
                 alt={content.title}
                 fill
                 className="object-cover"

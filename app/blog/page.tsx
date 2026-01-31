@@ -12,7 +12,7 @@ const blogPosts = [
     excerptRu: 'Секреты выбора тканей в Абу-Даби: лучшие магазины, лайфхаки и советы от профессионалов.',
     excerptEn: 'Secrets of choosing fabrics in Abu Dhabi: best stores, life hacks and tips from professionals.',
     date: '2026-02-01',
-    image: '/images/1.JPG'
+    image: '/images/blog/fabric-shopping.jpeg'
   },
   {
     slug: 'ladies-tailoring-abu-dhabi',
