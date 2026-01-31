@@ -32,18 +32,18 @@ export default function BlogPost() {
 
       <h2>Что такое индивидуальный пошив одежды</h2>
 
-      <p><strong>Пошив одежды на заказ</strong> — это процесс создания уникального предмета гардероба с нуля, полностью адаптированного под ваши параметры, предпочтения и стиль жизни. Опытная <strong>швея в Абу-Даби</strong> не просто шьёт одежду — она создаёт произведение искусства, которое идеально подходит именно вам.</p>
+      <p><strong>Пошив одежды на заказ</strong> – это процесс создания уникального предмета гардероба с нуля, полностью адаптированного под ваши параметры, предпочтения и стиль жизни. Опытная <strong>швея в Абу-Даби</strong> не просто шьёт одежду – она создаёт произведение искусства, которое идеально подходит именно вам.</p>
 
       <h2>Преимущества работы со швеёй в Абу-Даби</h2>
 
       <h3>1. Идеальная посадка</h3>
-      <p>Главное преимущество, которое предлагает профессиональная <strong>швея Абу-Даби</strong>, — это безупречная посадка по фигуре. В отличие от магазинной одежды, каждый сантиметр вашего наряда учитывает особенности вашего телосложения.</p>
+      <p>Главное преимущество, которое предлагает профессиональная <strong>швея Абу-Даби</strong>, – это безупречная посадка по фигуре. В отличие от магазинной одежды, каждый сантиметр вашего наряда учитывает особенности вашего телосложения.</p>
 
       <h3>2. Эксклюзивность дизайна</h3>
       <p><strong>Одежда на заказ в ОАЭ</strong> означает, что вы никогда не встретите человека в таком же наряде. Ваш стиль остаётся уникальным и неповторимым.</p>
 
       <h3>3. Выбор материалов премиум-класса</h3>
-      <p>При заказе <strong>пошива одежды в Абу-Даби</strong> вы можете выбрать именно те ткани, которые вам нравятся — от натурального шёлка до льна и высококачественного хлопка, идеально подходящих для климата ОАЭ.</p>
+      <p>При заказе <strong>пошива одежды в Абу-Даби</strong> вы можете выбрать именно те ткани, которые вам нравятся – от натурального шёлка до льна и высококачественного хлопка, идеально подходящих для климата ОАЭ.</p>
 
       <h3>4. Долговечность и качество</h3>
       <p>Профессиональный <strong>пошив одежды</strong> гарантирует высокое качество исполнения. Каждый шов, каждая деталь выполнены с максимальным вниманием, что обеспечивает долгий срок службы изделия.</p>
@@ -53,11 +53,11 @@ export default function BlogPost() {
       <p><strong>Индивидуальный пошив одежды в ОАЭ</strong> особенно актуален в следующих ситуациях:</p>
 
       <ul>
-        <li><strong>Особые случаи</strong> — свадьбы, важные деловые встречи, торжественные мероприятия</li>
-        <li><strong>Нестандартная фигура</strong> — когда сложно найти готовую одежду идеальной посадки</li>
-        <li><strong>Уникальный стиль</strong> — если вы хотите выделяться и иметь неповторимый образ</li>
-        <li><strong>Климатические особенности</strong> — создание комфортной одежды для жаркого климата ОАЭ</li>
-        <li><strong>Переделка любимых вещей</strong> — обновление гардероба без лишних трат</li>
+        <li><strong>Особые случаи</strong> – свадьбы, важные деловые встречи, торжественные мероприятия</li>
+        <li><strong>Нестандартная фигура</strong> – когда сложно найти готовую одежду идеальной посадки</li>
+        <li><strong>Уникальный стиль</strong> – если вы хотите выделяться и иметь неповторимый образ</li>
+        <li><strong>Климатические особенности</strong> – создание комфортной одежды для жаркого климата ОАЭ</li>
+        <li><strong>Переделка любимых вещей</strong> – обновление гардероба без лишних трат</li>
       </ul>
 
       <h2>Процесс работы: как заказать пошив одежды в Абу-Даби</h2>
@@ -66,33 +66,33 @@ export default function BlogPost() {
       <p>На первой встрече <strong>швея в Абу-Даби</strong> обсуждает с вами пожелания, снимает мерки, показывает образцы тканей и помогает определиться с дизайном.</p>
 
       <h3>Шаг 2: Выбор материалов</h3>
-      <p>Вы выбираете ткань, фурнитуру, цвета — всё, что сделает вашу <strong>одежду на заказ в ОАЭ</strong> по-настоящему особенной.</p>
+      <p>Вы выбираете ткань, фурнитуру, цвета – всё, что сделает вашу <strong>одежду на заказ в ОАЭ</strong> по-настоящему особенной.</p>
 
       <h3>Шаг 3: Примерки</h3>
       <p>В процессе <strong>пошива одежды</strong> проводится несколько примерок, чтобы обеспечить идеальную посадку и внести необходимые корректировки.</p>
 
       <h3>Шаг 4: Финальная отделка</h3>
-      <p>Завершающие штрихи делают ваш наряд совершенным — от обработки швов до установки фурнитуры.</p>
+      <p>Завершающие штрихи делают ваш наряд совершенным – от обработки швов до установки фурнитуры.</p>
 
       <h2>Стоимость индивидуального пошива в Абу-Даби</h2>
 
-      <p>Многие думают, что <strong>пошив одежды на заказ</strong> — это очень дорого. На самом деле, учитывая качество, долговечность и уникальность, это выгодное вложение. Цены на услуги <strong>швеи в Абу-Даби</strong> варьируются в зависимости от сложности модели и выбранных материалов, но результат всегда оправдывает ожидания.</p>
+      <p>Многие думают, что <strong>пошив одежды на заказ</strong> – это очень дорого. На самом деле, учитывая качество, долговечность и уникальность, это выгодное вложение. Цены на услуги <strong>швеи в Абу-Даби</strong> варьируются в зависимости от сложности модели и выбранных материалов, но результат всегда оправдывает ожидания.</p>
 
       <h2>Популярные услуги пошива в ОАЭ</h2>
 
       <ul>
-        <li><strong>Вечерние платья</strong> — элегантные наряды для светских мероприятий</li>
-        <li><strong>Деловые костюмы</strong> — строгий стиль для офиса</li>
-        <li><strong>Повседневная одежда</strong> — комфортные платья, юбки, блузки</li>
-        <li><strong>Свадебные наряды</strong> — платья мечты для особого дня</li>
-        <li><strong>Корсеты и нижнее бельё</strong> — для идеального силуэта</li>
+        <li><strong>Вечерние платья</strong> – элегантные наряды для светских мероприятий</li>
+        <li><strong>Деловые костюмы</strong> – строгий стиль для офиса</li>
+        <li><strong>Повседневная одежда</strong> – комфортные платья, юбки, блузки</li>
+        <li><strong>Свадебные наряды</strong> – платья мечты для особого дня</li>
+        <li><strong>Корсеты и нижнее бельё</strong> – для идеального силуэта</li>
       </ul>
 
       <h2>Заключение</h2>
 
       <p>Выбирая <strong>пошив одежды в Абу-Даби</strong>, вы выбираете качество, индивидуальность и комфорт. Профессиональная <strong>швея в Абу-Даби</strong> поможет создать гардероб вашей мечты, где каждая вещь будет сидеть идеально и отражать вашу личность.</p>
 
-      <p><strong>Одежда на заказ в ОАЭ</strong> — это не просто покупка, это инвестиция в ваш стиль, уверенность и комфорт. Позвольте себе роскошь носить одежду, созданную специально для вас.</p>
+      <p><strong>Одежда на заказ в ОАЭ</strong> – это не просто покупка, это инвестиция в ваш стиль, уверенность и комфорт. Позвольте себе роскошь носить одежду, созданную специально для вас.</p>
     `
   }
 
@@ -104,7 +104,7 @@ export default function BlogPost() {
 
       <h2>What is bespoke clothing tailoring</h2>
 
-      <p><strong>Custom clothing tailoring</strong> is the process of creating a unique wardrobe item from scratch, fully adapted to your parameters, preferences and lifestyle. An experienced <strong>seamstress in Abu Dhabi</strong> doesn't just sew clothes — she creates a work of art that's perfect for you.</p>
+      <p><strong>Custom clothing tailoring</strong> is the process of creating a unique wardrobe item from scratch, fully adapted to your parameters, preferences and lifestyle. An experienced <strong>seamstress in Abu Dhabi</strong> doesn't just sew clothes – she creates a work of art that's perfect for you.</p>
 
       <h2>Benefits of working with a seamstress in Abu Dhabi</h2>
 
@@ -115,7 +115,7 @@ export default function BlogPost() {
       <p><strong>Custom clothing in UAE</strong> means you'll never meet someone in the same outfit. Your style remains unique and inimitable.</p>
 
       <h3>3. Premium material selection</h3>
-      <p>When ordering <strong>clothing tailoring in Abu Dhabi</strong>, you can choose exactly the fabrics you like — from natural silk to linen and high-quality cotton, perfectly suited for UAE climate.</p>
+      <p>When ordering <strong>clothing tailoring in Abu Dhabi</strong>, you can choose exactly the fabrics you like – from natural silk to linen and high-quality cotton, perfectly suited for UAE climate.</p>
 
       <h3>4. Durability and quality</h3>
       <p>Professional <strong>clothing tailoring</strong> guarantees high-quality execution. Every seam, every detail is made with maximum attention, ensuring long product lifespan.</p>
@@ -125,11 +125,11 @@ export default function BlogPost() {
       <p><strong>Bespoke clothing tailoring in UAE</strong> is especially relevant in the following situations:</p>
 
       <ul>
-        <li><strong>Special occasions</strong> — weddings, important business meetings, ceremonial events</li>
-        <li><strong>Non-standard figure</strong> — when it's difficult to find ready-made clothing with perfect fit</li>
-        <li><strong>Unique style</strong> — if you want to stand out and have an inimitable look</li>
-        <li><strong>Climate features</strong> — creating comfortable clothing for UAE hot climate</li>
-        <li><strong>Alterations of favorite items</strong> — wardrobe update without extra expenses</li>
+        <li><strong>Special occasions</strong> – weddings, important business meetings, ceremonial events</li>
+        <li><strong>Non-standard figure</strong> – when it's difficult to find ready-made clothing with perfect fit</li>
+        <li><strong>Unique style</strong> – if you want to stand out and have an inimitable look</li>
+        <li><strong>Climate features</strong> – creating comfortable clothing for UAE hot climate</li>
+        <li><strong>Alterations of favorite items</strong> – wardrobe update without extra expenses</li>
       </ul>
 
       <h2>Work process: how to order clothing tailoring in Abu Dhabi</h2>
@@ -138,13 +138,13 @@ export default function BlogPost() {
       <p>At the first meeting, a <strong>seamstress in Abu Dhabi</strong> discusses your wishes, takes measurements, shows fabric samples and helps you decide on design.</p>
 
       <h3>Step 2: Material selection</h3>
-      <p>You choose fabric, accessories, colors — everything that will make your <strong>custom clothing in UAE</strong> truly special.</p>
+      <p>You choose fabric, accessories, colors – everything that will make your <strong>custom clothing in UAE</strong> truly special.</p>
 
       <h3>Step 3: Fittings</h3>
       <p>During the <strong>clothing tailoring</strong> process, several fittings are conducted to ensure perfect fit and make necessary adjustments.</p>
 
       <h3>Step 4: Final finishing</h3>
-      <p>Finishing touches make your outfit perfect — from seam processing to accessory installation.</p>
+      <p>Finishing touches make your outfit perfect – from seam processing to accessory installation.</p>
 
       <h2>Cost of bespoke tailoring in Abu Dhabi</h2>
 
@@ -153,11 +153,11 @@ export default function BlogPost() {
       <h2>Popular tailoring services in UAE</h2>
 
       <ul>
-        <li><strong>Evening dresses</strong> — elegant outfits for social events</li>
-        <li><strong>Business suits</strong> — strict style for office</li>
-        <li><strong>Casual wear</strong> — comfortable dresses, skirts, blouses</li>
-        <li><strong>Wedding attire</strong> — dream dresses for a special day</li>
-        <li><strong>Corsets and lingerie</strong> — for perfect silhouette</li>
+        <li><strong>Evening dresses</strong> – elegant outfits for social events</li>
+        <li><strong>Business suits</strong> – strict style for office</li>
+        <li><strong>Casual wear</strong> – comfortable dresses, skirts, blouses</li>
+        <li><strong>Wedding attire</strong> – dream dresses for a special day</li>
+        <li><strong>Corsets and lingerie</strong> – for perfect silhouette</li>
       </ul>
 
       <h2>Conclusion</h2>

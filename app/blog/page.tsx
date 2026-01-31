@@ -6,6 +6,15 @@ import { getTranslation, type Language } from '../i18n'
 
 const blogPosts = [
   {
+    slug: 'fabric-shopping-abu-dhabi',
+    titleRu: 'Где купить ткани в Абу-Даби: гид по лучшим местам',
+    titleEn: 'Where to Buy Fabrics in Abu Dhabi: Guide to Best Places',
+    excerptRu: 'Секреты выбора тканей в Абу-Даби: лучшие магазины, лайфхаки и советы от профессионалов.',
+    excerptEn: 'Secrets of choosing fabrics in Abu Dhabi: best stores, life hacks and tips from professionals.',
+    date: '2026-02-01',
+    image: '/images/1.JPG'
+  },
+  {
     slug: 'ladies-tailoring-abu-dhabi',
     titleRu: 'Пошив женской одежды в Абу-Даби: искусство создавать красоту',
     titleEn: 'Ladies Tailoring in Abu Dhabi: The Art of Creating Beauty',
@@ -45,7 +54,7 @@ const blogPosts = [
     slug: 'custom-clothing-abu-dhabi',
     titleRu: 'Одежда на заказ в Абу-Даби: плюсы пошива',
     titleEn: 'Custom Clothing in Abu Dhabi: Benefits of Bespoke Tailoring',
-    excerptRu: 'Почему швея в Абу-Даби — это лучший выбор для создания уникального гардероба. Индивидуальный пошив одежды в ОАЭ.',
+    excerptRu: 'Почему швея в Абу-Даби – это лучший выбор для создания уникального гардероба. Индивидуальный пошив одежды в ОАЭ.',
     excerptEn: 'Why a seamstress in Abu Dhabi is the best choice for creating a unique wardrobe. Bespoke clothing tailoring in UAE.',
     date: '2026-01-27',
     image: '/images/2.jpg'

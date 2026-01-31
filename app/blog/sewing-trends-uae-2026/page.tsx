@@ -30,9 +30,9 @@ export default function BlogPost() {
     content: `
       <p>Объединенные Арабские Эмираты и особенно Абу-Даби давно зарекомендовали себя как центр моды и стиля на Ближнем Востоке. В 2026 году <strong>пошив одежды на заказ</strong> в ОАЭ переживает настоящий бум, и всё больше жителей столицы выбирают индивидуальный подход к созданию гардероба.</p>
 
-      <h2>Почему швея в Абу-Даби — это не просто тренд</h2>
+      <h2>Почему швея в Абу-Даби – это не просто тренд</h2>
 
-      <p>Современная <strong>швея в Абу-Даби</strong> — это высококвалифицированный специалист, который сочетает традиционные техники с инновационными подходами. <strong>Индивидуальный пошив одежды в ОАЭ</strong> позволяет создавать уникальные наряды, которые идеально сидят по фигуре и отражают личность клиента.</p>
+      <p>Современная <strong>швея в Абу-Даби</strong> – это высококвалифицированный специалист, который сочетает традиционные техники с инновационными подходами. <strong>Индивидуальный пошив одежды в ОАЭ</strong> позволяет создавать уникальные наряды, которые идеально сидят по фигуре и отражают личность клиента.</p>
 
       <h2>Главные тренды пошива одежды в ОАЭ в 2026 году</h2>
 
@@ -40,7 +40,7 @@ export default function BlogPost() {
       <p>Жители Абу-Даби всё чаще обращаются к швеям для переделки и обновления существующей одежды. <strong>Пошив одежды</strong> с использованием экологичных материалов и переработка винтажных вещей становятся особенно популярными.</p>
 
       <h3>2. Минимализм с восточными акцентами</h3>
-      <p><strong>Одежда на заказ в ОАЭ</strong> часто сочетает лаконичные современные силуэты с традиционными арабскими элементами — вышивкой, драпировками, использованием роскошных тканей.</p>
+      <p><strong>Одежда на заказ в ОАЭ</strong> часто сочетает лаконичные современные силуэты с традиционными арабскими элементами – вышивкой, драпировками, использованием роскошных тканей.</p>
 
       <h3>3. Идеальная посадка</h3>
       <p>В климате ОАЭ особенно важно, чтобы одежда была не только красивой, но и комфортной. Профессиональная <strong>швея Абу-Даби</strong> учитывает особенности местного климата, создавая наряды из дышащих тканей с безупречной посадкой.</p>
@@ -60,18 +60,18 @@ export default function BlogPost() {
 
       <p>Обращаясь к опытной <strong>швее в Абу-Даби</strong>, вы получаете:</p>
       <ul>
-        <li><strong>Уникальность</strong> — ваша одежда создается специально для вас</li>
-        <li><strong>Идеальную посадку</strong> — все параметры учитываются индивидуально</li>
-        <li><strong>Качество</strong> — профессиональный <strong>пошив одежды</strong> гарантирует долговечность</li>
-        <li><strong>Выбор материалов</strong> — вы сами выбираете ткани и фурнитуру</li>
-        <li><strong>Экономию времени</strong> — не нужно искать идеальную вещь по магазинам</li>
+        <li><strong>Уникальность</strong> – ваша одежда создается специально для вас</li>
+        <li><strong>Идеальную посадку</strong> – все параметры учитываются индивидуально</li>
+        <li><strong>Качество</strong> – профессиональный <strong>пошив одежды</strong> гарантирует долговечность</li>
+        <li><strong>Выбор материалов</strong> – вы сами выбираете ткани и фурнитуру</li>
+        <li><strong>Экономию времени</strong> – не нужно искать идеальную вещь по магазинам</li>
       </ul>
 
       <h2>Заключение</h2>
 
-      <p><strong>Одежда на заказ в ОАЭ</strong> — это не роскошь, а разумный выбор современного человека, который ценит качество, комфорт и индивидуальность. Если вы ищете профессиональную <strong>швею в Абу-Даби</strong> для создания уникального гардероба, индивидуальный <strong>пошив одежды</strong> откроет для вас мир бесконечных возможностей.</p>
+      <p><strong>Одежда на заказ в ОАЭ</strong> – это не роскошь, а разумный выбор современного человека, который ценит качество, комфорт и индивидуальность. Если вы ищете профессиональную <strong>швею в Абу-Даби</strong> для создания уникального гардероба, индивидуальный <strong>пошив одежды</strong> откроет для вас мир бесконечных возможностей.</p>
 
-      <p>Позвольте себе роскошь носить одежду, созданную специально для вас. <strong>Пошив одежды в Абу-Даби</strong> — это инвестиция в ваш стиль и комфорт.</p>
+      <p>Позвольте себе роскошь носить одежду, созданную специально для вас. <strong>Пошив одежды в Абу-Даби</strong> – это инвестиция в ваш стиль и комфорт.</p>
     `
   }
 
@@ -91,7 +91,7 @@ export default function BlogPost() {
       <p>Abu Dhabi residents increasingly turn to seamstresses for alterations and updates of existing clothing. <strong>Clothing tailoring</strong> using eco-friendly materials and upcycling vintage items are becoming especially popular.</p>
 
       <h3>2. Minimalism with Eastern accents</h3>
-      <p><strong>Custom clothing in UAE</strong> often combines laconic modern silhouettes with traditional Arabic elements — embroidery, draping, use of luxurious fabrics.</p>
+      <p><strong>Custom clothing in UAE</strong> often combines laconic modern silhouettes with traditional Arabic elements – embroidery, draping, use of luxurious fabrics.</p>
 
       <h3>3. Perfect fit</h3>
       <p>In the UAE climate, it's especially important that clothing is not only beautiful but also comfortable. A professional <strong>Abu Dhabi seamstress</strong> considers the local climate's peculiarities, creating outfits from breathable fabrics with impeccable fit.</p>
@@ -111,11 +111,11 @@ export default function BlogPost() {
 
       <p>By turning to an experienced <strong>seamstress in Abu Dhabi</strong>, you get:</p>
       <ul>
-        <li><strong>Uniqueness</strong> — your clothing is created specifically for you</li>
-        <li><strong>Perfect fit</strong> — all parameters are individually considered</li>
-        <li><strong>Quality</strong> — professional <strong>clothing tailoring</strong> guarantees durability</li>
-        <li><strong>Material choice</strong> — you choose fabrics and accessories yourself</li>
-        <li><strong>Time saving</strong> — no need to search for the perfect item in stores</li>
+        <li><strong>Uniqueness</strong> – your clothing is created specifically for you</li>
+        <li><strong>Perfect fit</strong> – all parameters are individually considered</li>
+        <li><strong>Quality</strong> – professional <strong>clothing tailoring</strong> guarantees durability</li>
+        <li><strong>Material choice</strong> – you choose fabrics and accessories yourself</li>
+        <li><strong>Time saving</strong> – no need to search for the perfect item in stores</li>
       </ul>
 
       <h2>Conclusion</h2>
